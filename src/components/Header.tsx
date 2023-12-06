@@ -1,11 +1,11 @@
 import Link from './Link'
 
+const Header = () => {
 
-const NavBar = () => {
   return (
-    <div className='flex justify-between w-full'>
+    <div className='flex justify-between w-full xsm:hidden'>
       <p className="font-JetBrains">{"{ AScode }"}</p>
-      <div className='flex gap-3'>
+      <div className='gap-3 flex'>
         <Link page={'Home'}/>
         <Link page={'Projects'}/>
         <Link page={'About Me'}/>
@@ -15,4 +15,4 @@ const NavBar = () => {
   )
 }
 
-export default NavBar
+export default Header

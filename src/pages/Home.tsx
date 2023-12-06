@@ -1,4 +1,5 @@
-import NavBar from "@/components/NavBar"
+import Header from "@/components/Header"
+import HeaderMobile from "@/components/HeaderMobile"
 import { useState } from "react"
 import { useTrail, a } from '@react-spring/web'
 import React from "react"
@@ -30,16 +31,20 @@ function Home() {
   return (
     <>
       <section className="h-screen relative">
-        <NavBar/>
-        <div className="mt-40 text-left">
-          <div className={styles.container} onClick={() => set(state => !state)}>
-            <Trail open={open}>
-              <span>Hi, there!</span>
-              <span>I'm Alfredo, a <span className="text-accentColor">Software Developer</span></span>
-              <span>Passionate about <span className="text-accentColor">code</span> and </span>
-              <span className="text-accentColor">solving problems</span>
-              <span>I'm currently based in <span className="text-accentColor">Montreal</span>.</span>
-            </Trail>
+        <Header />
+        <HeaderMobile/>
+        
+        <div className="flex flex-col h-5/6 justify-center ">
+          <div className="text-left">
+            <div className={styles.container} onClick={() => set(state => !state)}>
+              <Trail open={open}>
+                <span>Hi, there!</span>
+                <span>I'm Alfredo, a <span className="text-accentColor">Software Developer</span></span>
+                <span>Passionate about <span className="text-accentColor">code</span> and </span>
+                <span className="text-accentColor">solving problems</span>
+                <span>I'm currently based in <span className="text-accentColor">Montreal</span>.</span>
+              </Trail>
+            </div>
           </div>
         </div>
 
