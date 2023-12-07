@@ -1,36 +1,53 @@
-import { useState } from 'react';
-import Link from './Link'
-import { slide as Menu } from "react-burger-menu";
-import MenuIcon from "@/assets/Menu Icon.svg"
-import CloseIcon from "@/assets/Close.svg"
-import "@/components/HeaderMobile.css"
+import { useState } from "react";
+import { Squash as Hamburger } from "hamburger-react";
+import "./teste.css";
+import Link from "./Link";
+
+const routes = [
+  {
+    title: "Home",
+  },
+  {
+    title: "Projects",
+  },
+  {
+    title: "About Me",
+  },
+  {
+    title: "Contact",
+  },
+];
 
 const HeaderMobile = () => {
   const [isOpen, setOpen] = useState(false);
-  const handleIsOpen = () => setOpen(!isOpen)
-  const closeSideBar = () => setOpen(false);
 
   return (
-    // <div className='flex justify-between w-full items-center '>
-    //   <p className="font-JetBrains">{"{ AScode }"}</p>
-        <Menu 
-          isOpen={isOpen} 
-          onOpen={handleIsOpen} 
-          onClose={handleIsOpen}
-          customBurgerIcon={<img src={MenuIcon}/>}
-          customCrossIcon={<img src={CloseIcon}/>}
-          right>
-          <a id="home" onClick={closeSideBar} className="menu-item" href="/">Home</a>
-          <a id="about" className="menu-item" href="/about">About</a>
-          <a id="contact" className="menu-item" href="/contact">Contact</a>
-            {/* <Link page={'Home'} onClick={closeSideBar}/>
-            <Link page={'Projects'} onClick={closeSideBar}/>
-            <Link page={'About Me'} onClick={closeSideBar}/>
-            <Link page={'Contact'} onClick={closeSideBar}/> */}
-        </Menu>
-      // </div>
+    <div
+      className="flex w-full items-center justify-between sm:hidden"
+      id="outer-container"
+    >
+      <p className="font-JetBrains">{"{ AScode }"}</p>
+      <div id="page-wrap">
+        <Hamburger toggled={isOpen} size={20} toggle={setOpen} />
+        {isOpen && (
+          <div className="fixed left-0 right-0 z-10 h-full bg-myBlack p-5 pt-0">
+            <ul className="mt-5 grid gap-2">
+              {routes.map((route, index) => {
+                return (
+                  <li key={index} className=" ">
+                    <Link
+                      page={route.title}
+                      className="text-xl text-offwhite hover:text-accentColor"
+                    />
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
 
-  )
-}
-
-export default HeaderMobile
+export default HeaderMobile;

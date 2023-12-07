@@ -1,20 +1,21 @@
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+// import "./Link.css"
 
 type Props = {
   page: string,
   onClick?: () => void, 
+  className: string
 
 }
 
-const Link = ({ page, onClick }: Props ) => {
+const Link = ({ page, onClick , className}: Props ) => {
 
   const lowerCasePage = page.toLowerCase().replace(/ /g, ""); 
   
 
   return (
-    <AnchorLink href={`#${lowerCasePage}`} className="hover:text-accentColor duration-700 menu-item" onClick={onClick}>
+    <a href={`#${lowerCasePage}`} className={`${className} link`} onClick={onClick}>
       {page}
-    </AnchorLink>
+    </a>
   )
 }
 

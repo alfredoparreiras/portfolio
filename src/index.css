@@ -82,6 +82,7 @@
 html, body, #root, .app{ 
   height: 100%;
   width: 100%;
+  margin: 0 1rem;
   background-color:#F4F4F5;
   font-family: "DM Sans", sans-serif;
 }

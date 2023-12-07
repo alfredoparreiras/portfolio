@@ -55,6 +55,7 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
         offwhite: "#F4F4F5",
+        myBlack: "#3B4041",
         accentColor: "#008080"
       },
       borderRadius: {

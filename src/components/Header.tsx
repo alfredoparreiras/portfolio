@@ -1,18 +1,29 @@
-import Link from './Link'
+import Link from "./Link";
 
 const Header = () => {
-
   return (
-    <div className='flex justify-between w-full xsm:hidden'>
+    <div className=" w-screen xsm:hidden sm:flex justify-between">
       <p className="font-JetBrains">{"{ AScode }"}</p>
-      <div className='gap-3 flex'>
-        <Link page={'Home'}/>
-        <Link page={'Projects'}/>
-        <Link page={'About Me'}/>
-        <Link page={'Contact'}/>
+      <div className="flex gap-3">
+        <Link
+          page={"Home"}
+          className="text-xl text-myBlack hover:text-accentColor"
+        />
+        <Link
+          page={"Projects"}
+          className="text-xl text-myBlack hover:text-accentColor"
+        />
+        <Link
+          page={"About Me"}
+          className="text-xl text-myBlack hover:text-accentColor"
+        />
+        <Link
+          page={"Contact"}
+          className="text-xl text-myBlack hover:text-accentColor"
+        />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
