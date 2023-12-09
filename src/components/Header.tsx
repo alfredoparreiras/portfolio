@@ -2,7 +2,7 @@ import Link from "./Link";
 
 const Header = () => {
   return (
-    <div className=" w-screen xsm:hidden sm:flex justify-between">
+    <div className="xsm:hidden sm:flex justify-between">
       <p className="font-JetBrains">{"{ AScode }"}</p>
       <div className="flex gap-3">
         <Link
