@@ -1,8 +1,24 @@
+import { useSpring, animated } from "@react-spring/web";
+
+
 
 
 const MobileHome = () => {
+
+  const fade = useSpring({
+    from: { opacity: 0 },
+    opacity: 1,
+    config: { 
+      duration: 3000, 
+      mass: 100,
+      tension: 170,
+      friction: 26},
+  });
+
+
+
   return (
-    <div className="text-left text-5xl leading-10 sm:hidden">
+    <animated.div className="text-left text-5xl leading-14 mt-10 sm:hidden md:hidden onlyXsm:text-4xl px-12" style={fade}>
       <p>Hi, there!</p>
       <p className="mt-5">
         {" "}
@@ -19,7 +35,7 @@ const MobileHome = () => {
         I'm currently based in{" "}
         <span className="text-accentColor">Montreal</span>.
       </p>
-    </div>
+    </animated.div>
   );
 }
 

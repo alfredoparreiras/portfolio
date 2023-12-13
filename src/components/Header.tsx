@@ -1,29 +1,14 @@
-import Link from "./Link";
+import HeaderMobile from "./HeaderMobile"
+import HeaderMain from "./HeaderMain"
+
 
 const Header = () => {
   return (
-    <div className="xsm:hidden sm:flex justify-between">
-      <p className="font-JetBrains">{"{ AScode }"}</p>
-      <div className="flex gap-3">
-        <Link
-          page={"Home"}
-          className="text-xl text-myBlack hover:text-accentColor"
-        />
-        <Link
-          page={"Projects"}
-          className="text-xl text-myBlack hover:text-accentColor"
-        />
-        <Link
-          page={"About Me"}
-          className="text-xl text-myBlack hover:text-accentColor"
-        />
-        <Link
-          page={"Contact"}
-          className="text-xl text-myBlack hover:text-accentColor"
-        />
-      </div>
-    </div>
-  );
-};
+    <>
+      <HeaderMain/>
+      <HeaderMobile/>
+    </>
+  )
+}
 
-export default Header;
+export default Header

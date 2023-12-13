@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Squash as Hamburger } from "hamburger-react";
 import "./teste.css";
 import Link from "./Link";
@@ -20,13 +20,23 @@ const routes = [
 
 const HeaderMobile = () => {
   const [isOpen, setOpen] = useState(false);
+  const [isScrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => { 
+      setScrolled(window.scrollY > 50);
+    }
+
+    window.addEventListener('scroll', handleScroll); 
+
+    return ()=> window.removeEventListener("scroll",handleScroll)
+  }, []);
 
   return (
     <div
-      className="flex w-full items-center justify-between sm:hidden"
-      id="outer-container"
+      className={`mobile-header px-12 py-3 sticky top-0 flex items-center justify-between sm:hidden md:hidden ${isScrolled ? 'bg-accentColor text-white z-50' : ''}`}
     >
-      <p className="font-JetBrains">{"{ AScode }"}</p>
+      <p className="font-JetBrains text-lg font-semibold">{"{ AScode }"}</p>
       <div id="page-wrap">
         <Hamburger toggled={isOpen} size={20} toggle={setOpen} />
         {isOpen && (

@@ -29,7 +29,7 @@ const Trail: React.FC<{ open: boolean; children: React.ReactNode }> = ({
 const WebHome = () => {
   const [open, set] = useState(true);
   return (
-    <div className="text-left xsm:hidden sm:block">
+    <div className="text-left sm:block xsm:hidden">
       <div className={styles.container} onClick={() => set((state) => !state)}>
         <Trail open={open}>
           <span>Hi, there!</span>

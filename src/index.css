@@ -80,9 +80,6 @@
 }
 
 html, body, #root, .app{ 
-  height: 100%;
-  width: 100vw;
-  max-width: 95vw;
   margin: 0 auto;
   background-color:#F4F4F5;
   font-family: "DM Sans", sans-serif;
@@ -92,3 +89,18 @@ html, body, #root, .app{
   padding:2rem;
 }
 
+@media screen and (min-width: 100px) and (max-width: 450px) {
+  .mobile-header{ 
+    zoom: 0.95;
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 1080px){
+  html, body, #root, .app{
+    margin: 0; 
+  } 
+
+  #root {
+  padding:0rem;
+  }
+}

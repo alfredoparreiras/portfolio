@@ -2,11 +2,12 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+    "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
     container: {
       center: true,
@@ -18,7 +19,7 @@ module.exports = {
     extend: {
       fontFamily: {
         dmsans: ["DM Sans", "sans-serif"],
-        JetBrains: ['JetBrains Mono', "monospace"]
+        JetBrains: ["JetBrains Mono", "monospace"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -56,7 +57,7 @@ module.exports = {
         },
         offwhite: "#F4F4F5",
         myBlack: "#3B4041",
-        accentColor: "#008080"
+        accentColor: "#377E80",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -78,11 +79,15 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       screens: {
-        "xsm": "350px", 
-        "sm": "768px",
-        "md": "1080px"
-      }
+        xsm: { min: "200px", max: "768px" },
+        sm: { min: "768px", max: "1080px" },
+        md: "1080px",
+        onlyXsm: { min: "100px", max: "400px" },
+      },
+      maxWidth: {
+        icon: "32px",
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-}
+  plugins: [require("tailwindcss-animate"), require("flowbite/plugin")],
+};
