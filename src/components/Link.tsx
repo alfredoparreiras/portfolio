@@ -1,21 +1,21 @@
 // import "./Link.css"
+import { Link as RouterLink } from "react-router-dom";
 
 type Props = {
-  page: string,
-  onClick?: () => void, 
-  className: string
+  href: string,
+  className?: string,
+  dest: string
 
 }
 
-const Link = ({ page, onClick , className}: Props ) => {
-
-  const lowerCasePage = page.toLowerCase().replace(/ /g, ""); 
-  
+const Link = ({ href , className, dest}: Props ) => {  
 
   return (
-    <a href={`#${lowerCasePage}`} className={`${className} link`} onClick={onClick}>
-      {page}
-    </a>
+    <div className="text-4xl uppercase text-red-400">
+      <RouterLink to={href} className={className}>
+        {dest}
+      </RouterLink>
+    </div>
   )
 }
 

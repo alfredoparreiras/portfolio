@@ -1,15 +1,15 @@
-import CSharpImage from "../../assets/Icons/Languages/CSharp.png"
-import JavaImage from "../../assets/Icons/Languages/Java.png"
-import TypescriptImage from "../../assets/Icons/Languages/Typescript.png"
-import ASPnetImage from "../../assets/Icons/Languages/ASP.png"
-import JavaEEImage from "../../assets/Icons/Languages/JavaEE.png"
-import NodeImage from "../../assets/Icons/Languages/Node.png"
-import ReactImage from "../../assets/Icons/Languages/React.png"
-import SpringBootImage from "../../assets/Icons/Languages/SpringBoot.png"
-import MYSqlImage from "../../assets/Icons/Languages/MySQL.png"
-import SQLServerImage from "../../assets/Icons/Languages/SQLServer.png"
-import AWSImage from "../../assets/Icons/Languages/AWS.png"
-import DockerImage from "../../assets/Icons/Languages/Docker.png"
+import CSharpImage from "../../assets/Icons/LanguagesSVG/csharp-plain.svg"
+import JavaImage from "../../assets/Icons/LanguagesSVG/java-plain.svg"
+import TypescriptImage from "../../assets/Icons/LanguagesSVG/typescript-plain.svg"
+import ASPnetImage from "../../assets/Icons/LanguagesSVG/ASP file icon.svg"
+import JavaEEImage from "../../assets/Icons/LanguagesSVG/java-plain.svg"
+import NodeImage from "../../assets/Icons/LanguagesSVG/nodejs-plain-wordmark.svg"
+import ReactImage from "../../assets/Icons/LanguagesSVG/react-original.svg"
+import SpringBootImage from "../../assets/Icons/LanguagesSVG/spring-plain.svg"
+import MYSqlImage from "../../assets/Icons/LanguagesSVG/mysql-plain.svg"
+import SQLServerImage from "../../assets/Icons/LanguagesSVG/SQL icon 4219421.svg"
+import AWSImage from "../../assets/Icons/LanguagesSVG/amazonwebservices-original.svg"
+import DockerImage from "../../assets/Icons/LanguagesSVG/docker-plain.svg"
 
 
 
@@ -24,8 +24,8 @@ export const skills = [
     imgUrl: JavaImage
   }, 
   {
-    name: "Typescript",
-    imgUrl: TypescriptImage
+    name: "Node",
+    imgUrl: NodeImage
   },
   {
     name: "ASP.net",
@@ -36,8 +36,8 @@ export const skills = [
     imgUrl: JavaEEImage
   },
   {
-    name: "Node",
-    imgUrl: NodeImage
+    name: "Typescript",
+    imgUrl: TypescriptImage
   },
   {
     name: "React",
@@ -48,6 +48,14 @@ export const skills = [
     imgUrl: SpringBootImage
   },
   {
+    name: "AWS",
+    imgUrl: AWSImage
+  },
+  {
+    name: "Docker",
+    imgUrl: SQLServerImage
+  },
+  {
     name: "MySQL",
     imgUrl: MYSqlImage
   },
@@ -55,15 +63,8 @@ export const skills = [
     name: "SQLServer",
     imgUrl: SQLServerImage
   },
-  {
-    name: "AWS",
-    imgUrl: AWSImage
-  },
-  {
-    name: "Docker",
-    imgUrl: DockerImage
-  },
 ]
+
 
 export const frameworks = [
   {

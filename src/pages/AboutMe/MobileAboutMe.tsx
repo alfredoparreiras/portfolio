@@ -1,45 +1,33 @@
-import React from 'react'
 import Me from "../../assets/me.jpeg"
 import { skills } from './skills';
+import MainTitle from '@/components/MainTitle';
 
 
 const MobileAboutMe = () => {
   return (
-    <section id="aboutme" className="px-12">
-      <h1 className="py-5 text-end text-6xl font-semibold text-accentColor ">
-        About Me
-      </h1>
+    <section className=" md:hidden">
+      <MainTitle title='Who Am I' />
       <div className="flex flex-col items-center">
         <div className="w-screen">
           <img src={Me} alt="" className="" />
         </div>
-        <div className="mt-10 flex flex-col items-center text-justify text-lg ">
+        <div className="mt-10 flex flex-col text-justify text-lg">
           <p className="mb-3">
-            Hi, I'm Alfredo, a proud Brazilian of 33 years, currently living in
-            the vibrant city of Montreal. I'm happily married and deeply rooted
-            in my Christian faith, which guides me in my daily life.
+            Hi, I'm Alfredo, a proud Brazilian currently living in the vibrant city of Montreal. I'm happily married to Carol and deeply connected with my Christian faith.
           </p>
           <p className="mb-3">
-            As a passionate software developer, I thrive on exploring new
-            technologies and pushing the boundaries of digital innovation.
+            As a focused developer, my excitement lies in exploring new technologies and broadening the scope of digital discovery. You can find my actual stack below.
           </p>
           <p className="mb-3">
-            But there's more to me than just coding! I also love being outdoors,
-            especially running and cycling. When I'm not working, I enjoy
-            reading, and exploring the world of cooking and coffee.
+            But there's more to me than just coding! When I'm not working, I enjoy reading, running and exploring the worlds of cooking and coffee.
           </p>
           <p className="mb-3">
-            A quirky fact about me? I have a growing collection of tattoos and
-            pens, each with its own story and significance.
+            A quirky fact about me? I have a growing collection of tattoos.
           </p>
-          <p className="mb-3">
-            Here, I share my journey - a blend of code, coffee, and creativity.
-            Dive in to discover more!
+          <p className="mb-3 text-left">
+            Welcome!
           </p>
-          <h2 className="mb-5 pt-5 text-left text-3xl font-medium text-accentColor">
-            Skills
-          </h2>
-          <div className="mb-10 grid grid-cols-3 gap-4">
+          <div className="my-10 grid grid-cols-3 gap-8">
             {skills.map((item, index) => {
               return (
                 <div key={index} className="">

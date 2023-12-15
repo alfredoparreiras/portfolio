@@ -18,7 +18,7 @@ const MobileHome = () => {
 
 
   return (
-    <animated.div className="text-left text-5xl leading-14 mt-10 sm:hidden md:hidden onlyXsm:text-4xl px-12" style={fade}>
+    <animated.div className="text-left text-4.5xl leading-10 mt-20 sm:hidden md:hidden onlyXsm:text-4xl px-12" style={fade}>
       <p>Hi, there!</p>
       <p className="mt-5">
         {" "}
@@ -27,8 +27,8 @@ const MobileHome = () => {
       </p>
       <p className="mt-5">
         {" "}
-        Passionate about <span className="text-accentColor">code</span> and{" "}
-        <span className="text-accentColor">solving problems</span>
+        Dedicate about <span className="text-accentColor">solving problems</span> through{" "}
+        <span className="text-accentColor">code</span>
       </p>
       <p className="mt-5">
         {" "}

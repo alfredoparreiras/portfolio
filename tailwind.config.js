@@ -57,7 +57,7 @@ module.exports = {
         },
         offwhite: "#F4F4F5",
         myBlack: "#3B4041",
-        accentColor: "#377E80",
+        accentColor: "#24527A",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -79,14 +79,21 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       screens: {
-        xsm: { min: "200px", max: "768px" },
-        sm: { min: "768px", max: "1080px" },
-        md: "1080px",
-        onlyXsm: { min: "100px", max: "400px" },
+        xsm: '100px',
+        sm: '400px',
+        md: "760px",
+        lg: "1080px",
       },
       maxWidth: {
         icon: "32px",
       },
+      fontSize: {
+        '4.5xl': '2.750rem',
+      }, 
+      height : { 
+        'sectionVh': '91.5vh',
+        'mobileHeaderVh': '7.5vh',
+      }
     },
   },
   plugins: [require("tailwindcss-animate"), require("flowbite/plugin")],

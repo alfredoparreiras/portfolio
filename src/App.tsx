@@ -1,44 +1,32 @@
-import { createBrowserRouter,RouterProvider,} from "react-router-dom";
+import {Routes,Route,useLocation} from "react-router-dom"
 
-import Index from "./pages/Index";
-import TaskTrace from "./pages/Projects/TaskTrace";
-import React from "react";
+import AboutMe from "./pages/AboutMe/AboutMe";
+import Header from "./components/Header";
+import Home from "./pages/Home/Home";
+import Projects from "./pages/Projects/Projects";
+import Contact from "./pages/Contact/Contact";
+
+import { AnimatePresence } from "framer-motion";
 
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Index/>
-  }, 
-  {
-    path: "/project/tasktrace",
-    element: <TaskTrace/>
-  },
-  {
-    path: "/project/foodninjaapidocumentation",
-    element: <TaskTrace/>
-  },
-  {
-    path: "/project/foodninjaapi",
-    element: <TaskTrace/>
-  },
-    {
-    path: "/project/moshify",
-    element: <TaskTrace/>
-  },
-  {
-    path: "/project/pokedex",
-    element: <TaskTrace/>
-  }
-])
 
 
 function App() {
+  
+  const location = useLocation(); 
 
   return (
-    <React.StrictMode>
-      <RouterProvider router={router}/>
-    </React.StrictMode>
+    <>
+      <Header/>
+      <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+          <Route index element={<Home/>} />
+          <Route path="/whoami" element={<AboutMe/>} />
+          <Route path="/whatidid" element={<Projects/>} />
+          <Route path="/howtofindme" element={<Contact/>} />
+        </Routes>
+      </AnimatePresence>
+    </>
   );
 }
 

@@ -1,62 +1,54 @@
 import { useEffect, useState } from "react";
-import { Squash as Hamburger } from "hamburger-react";
 import "./teste.css";
-import Link from "./Link";
 
 const routes = [
   {
-    title: "Home",
+    title: "Home", href: "" 
   },
   {
-    title: "Projects",
+    title: "My Work", href: "#projects"
   },
   {
-    title: "About Me",
+    title: "Who Am I", href: "#whoami"
   },
   {
-    title: "Contact",
+    title: "Get in touch", href: "#getintouch"
   },
 ];
 
 const HeaderMobile = () => {
   const [isOpen, setOpen] = useState(false);
-  const [isScrolled, setScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => { 
-      setScrolled(window.scrollY > 50);
-    }
-
-    window.addEventListener('scroll', handleScroll); 
-
-    return ()=> window.removeEventListener("scroll",handleScroll)
-  }, []);
+  const toggleMenu = () => {
+    setOpen(!isOpen)
+  }
 
   return (
-    <div
-      className={`mobile-header px-12 py-3 sticky top-0 flex items-center justify-between sm:hidden md:hidden ${isScrolled ? 'bg-accentColor text-white z-50' : ''}`}
+    <header
+      className={`mobile-header h-mobileHeaderVh w-full px-12 sticky top-0 flex items-center justify-between sm:hidden md:hidden`}
     >
       <p className="font-JetBrains text-lg font-semibold">{"{ AScode }"}</p>
-      <div id="page-wrap">
-        <Hamburger toggled={isOpen} size={20} toggle={setOpen} />
-        {isOpen && (
-          <div className="fixed left-0 right-0 z-10 h-full bg-myBlack p-5 pt-0">
-            <ul className="mt-5 grid gap-2">
-              {routes.map((route, index) => {
-                return (
-                  <li key={index} className=" ">
-                    <Link
-                      page={route.title}
-                      className="text-xl text-offwhite hover:text-accentColor"
-                    />
-                  </li>
-                );
-              })}
-            </ul>
+      <nav>
+        <p onClick={toggleMenu}>Menu</p>
+      </nav>
+      {isOpen && <div className="fixed left-0 top-0 w-full h-screen p-10 bg-yellow-400 text-red-600">
+        <div className="flex h-full flex-col">
+          <div className="flex justify-between">
+            <h1 className="text-lg text-red-600">AScode</h1>
+            <p className="cursor-pointer text-md text-red-600" onClick={toggleMenu}>Close</p>
           </div>
-        )}
-      </div>
-    </div>
+        </div>
+        <div className="flex flex-col h-full justify-center items-center gap-4">
+          {routes.map((link,index) => {
+            return(
+                // <Link href={link.href} dest={link.title} key={index}/>
+                <p className="text-white" key={index}>{link.title}</p>
+              
+            )
+          })}
+        </div>
+      </div>}
+    </header>
   );
 };
 
