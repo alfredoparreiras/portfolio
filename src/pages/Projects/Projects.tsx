@@ -1,13 +1,13 @@
 import transition from "@/Transition"
-import HomeProjects from "./HomeProjects"
+import WebProjects from "./WebProjects"
 import MobileProjects from "./MobileProjects"
 import ArrowBottom from "@/components/ArrowBottom"
 
 const Projects = () => {
   return (
-      <section id='whatidid' className='px-12 mt-20'>
+      <section id='whatidid' className='px-12 lg:pt-10'>
         <MobileProjects />
-        <HomeProjects/>
+        <WebProjects/>
         <ArrowBottom href="/howtofindme"/>
       </section>
   )

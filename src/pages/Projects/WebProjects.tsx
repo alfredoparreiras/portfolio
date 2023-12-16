@@ -4,11 +4,11 @@ import TopRigthArrow from "@/assets/Icons/ArrowTopRight.svg"
 import MobileCarousel from "@/components/MobileCarousel";
 
 
-const HomeProjects = () => {
+const WebProjects = () => {
   return (
     <section className="">
       <MainTitle title="What I Did" />
-        <div className="my-10 px-4 grid grid-cols-3 gap-12">
+        <div className="my-10 px-4 grid grid-cols-3 gap-8">
           {projects.map((project, index) => {
             return (
               <div key={index} className="mb-14" id={`mobileProjects${index}`}>
@@ -17,14 +17,17 @@ const HomeProjects = () => {
                     <h1 className="text-xl me-1"> {project.title}</h1>
                     <img src={TopRigthArrow} alt="" className="w-3 h-3" />
                   </div>
-                  <MobileCarousel images={project.mobileImages} />
+                  <div className="group relative inline-block">
+                    <img src={project.mobileImages[0]} className="block w-full h-auto transition-opacity" alt="" />
+                    <div className="overlay absolute inset-0 bg-accentColor/50 dark:bg-darkAccentColor/50 transition-opacity group-hover:opacity-0 duration-700"></div>
+                  </div>
                   <div className="px-1">
                     <div className="mt-5 grid grid-cols-3 gap-3">
                       {project.homeTools.map((tool, index) => {
                         return (
                           <p
                             key={index}
-                            className=" rounded-lg bg-myBlack/20 p-1 text-center text-sm"
+                            className=" rounded-xl bg-accentColor/30 dark:bg-darkAccentColor/90 p-1 text-center text-sm"
                           >
                             {tool}
                             {}
@@ -44,4 +47,4 @@ const HomeProjects = () => {
   )
 }
 
-export default HomeProjects
+export default WebProjects

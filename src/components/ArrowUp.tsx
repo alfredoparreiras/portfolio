@@ -1,12 +1,26 @@
 import UpArrow from '@/assets/Icons/UpArrow.svg'
+import UpArrowDark from '@/assets/Icons/UpArrowDark.svg'
 import { useSpring, animated } from "@react-spring/web";
 import { backInOut, motion } from "framer-motion";
+import { useEffect, useState } from 'react';
 
 type ArrowBottomProps = {
   href: string, 
 }
 
 function ArrowUp({href}: ArrowBottomProps) {
+  const [darkMode, setDarkMode] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = (event: MediaQueryListEvent) => setDarkMode(event.matches);
+
+    mediaQuery.addEventListener('change', handleChange)
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, [])
+
+  
+  
   const fade = useSpring({
     from: { opacity: 0 },
     opacity: 1,
@@ -22,7 +36,7 @@ function ArrowUp({href}: ArrowBottomProps) {
     <animated.div className="flex flex-col items-center" style={fade}>
             <a href={href}>
               <motion.img
-                src={UpArrow}
+                src={darkMode ? UpArrowDark : UpArrow}
                 alt=""
                 className=" w-20"
                 initial={{ rotate: "0deg" }}

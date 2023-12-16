@@ -9,7 +9,7 @@ const AboutMe = () => {
       <section id='whoami' className='px-12 lg:pt-10 '>
         <MobileAboutMe />
         <WebAboutMe />
-          <ArrowBottom href="/whatidid"/>
+        <ArrowBottom href="/whatidid"/>
       </section>
   );
 }

@@ -1,12 +1,24 @@
 import BottomArrow from '@/assets/Icons/BottomArrow.svg'
+import BottomArrowDark from '@/assets/Icons/BottomArrowDark.svg'
 import { useSpring, animated } from "@react-spring/web";
 import { backInOut, motion } from "framer-motion";
+import { useEffect, useState } from 'react';
 
 type ArrowBottomProps = {
   href: string, 
 }
 
 function ArrowBottom({href}: ArrowBottomProps) {
+  const [darkMode, setDarkMode] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-colors-scheme: dark)');
+    const handleChange = (event: MediaQueryListEvent) => setDarkMode(event.matches); 
+
+    mediaQuery.addEventListener('change', handleChange); 
+    return () => mediaQuery.removeEventListener('change', handleChange)
+  }, [])
+  
   const fade = useSpring({
     from: { opacity: 0 },
     opacity: 1,
@@ -22,7 +34,7 @@ function ArrowBottom({href}: ArrowBottomProps) {
     <animated.div className="flex flex-col items-center" style={fade}>
             <a href={href}>
               <motion.img
-                src={BottomArrow}
+                src={darkMode ? BottomArrowDark : BottomArrow}
                 alt=""
                 className=" w-20"
                 initial={{ rotate: "0deg" }}

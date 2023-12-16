@@ -10,58 +10,86 @@ import MYSqlImage from "../../assets/Icons/LanguagesSVG/mysql-plain.svg"
 import SQLServerImage from "../../assets/Icons/LanguagesSVG/SQL icon 4219421.svg"
 import AWSImage from "../../assets/Icons/LanguagesSVG/amazonwebservices-original.svg"
 import DockerImage from "../../assets/Icons/LanguagesSVG/docker-plain.svg"
+//Dark
+import CSharpImageDark from "@/assets/Icons/LanguagesSVG Dark/csharp-plain.svg"
+import JavaImageDark from "@/assets/Icons/LanguagesSVG Dark/java-plain.svg"
+import TypescriptImageDark from "@/assets/Icons/LanguagesSVG Dark/typescript-plain.svg"
+import ASPnetImageDark from "@/assets/Icons/LanguagesSVG Dark/ASP file icon.svg"
+import JavaEEImageDark from "@/assets/Icons/LanguagesSVG Dark/java-plain.svg"
+import NodeImageDark from "@/assets/Icons/LanguagesSVG Dark/nodejs-plain-wordmark.svg"
+import ReactImageDark from "@/assets/Icons/LanguagesSVG Dark/react-original.svg"
+import SpringBootImageDark from "@/assets/Icons/LanguagesSVG Dark/spring-plain.svg"
+import MYSqlImageDark from "@/assets/Icons/LanguagesSVG Dark/mysql-plain.svg"
+import SQLServerImageDark from "@/assets/Icons/LanguagesSVG Dark/SQL icon 4219421.svg"
+import AWSImageDark from "@/assets/Icons/LanguagesSVG Dark/amazonwebservices-original.svg"
+import DockerImageDark from "@/assets/Icons/LanguagesSVG Dark/docker-plain.svg"
 
+type Skill = {
+  name: string;
+  imgUrl: string;
+  DarkImgUrl: string;
+};
 
-
-
-export const skills = [
+export const skills: Skill[] = [
   {
     name: "C#",
-    imgUrl: CSharpImage
+    imgUrl: CSharpImage,
+    DarkImgUrl: CSharpImageDark
   }, 
   {
     name: "Java",
-    imgUrl: JavaImage
+    imgUrl: JavaImage,
+    DarkImgUrl: JavaImageDark
   }, 
   {
     name: "Node",
-    imgUrl: NodeImage
+    imgUrl: NodeImage,
+    DarkImgUrl: NodeImageDark
   },
   {
     name: "ASP.net",
-    imgUrl: ASPnetImage
+    imgUrl: ASPnetImage,
+    DarkImgUrl: ASPnetImageDark
   },
   {
     name: "JavaEE",
-    imgUrl: JavaEEImage
+    imgUrl: JavaEEImage,
+    DarkImgUrl: JavaEEImageDark
   },
   {
     name: "Typescript",
-    imgUrl: TypescriptImage
+    imgUrl: TypescriptImage,
+    DarkImgUrl: TypescriptImageDark
   },
   {
     name: "React",
-    imgUrl: ReactImage
+    imgUrl: ReactImage,
+    DarkImgUrl: ReactImageDark
   },
   {
     name: "Spring",
-    imgUrl: SpringBootImage
+    imgUrl: SpringBootImage,
+    DarkImgUrl: SpringBootImageDark
   },
   {
     name: "AWS",
-    imgUrl: AWSImage
-  },
+    imgUrl: AWSImage,
+    DarkImgUrl: AWSImageDark
+  }, 
   {
     name: "Docker",
-    imgUrl: SQLServerImage
+    imgUrl: DockerImage,
+    DarkImgUrl: DockerImageDark
   },
   {
     name: "MySQL",
-    imgUrl: MYSqlImage
+    imgUrl: MYSqlImage,
+    DarkImgUrl: MYSqlImageDark
   },
   {
     name: "SQLServer",
-    imgUrl: SQLServerImage
+    imgUrl: SQLServerImage,
+    DarkImgUrl: SQLServerImageDark
   },
 ]
 

@@ -25,11 +25,12 @@ import MoshifyPage3 from "@/assets/Projects/Moshify/Page3.jpeg"
 import MoshifyPage4 from "@/assets/Projects/Moshify/Page4.jpeg"
 import MoshifyPage5 from "@/assets/Projects/Moshify/Page5.jpeg"
 //DatingApp
-import DatingAppHome from "@/assets/Projects/DatingApp/Dashboard.jpeg"
-import DatingAppMenu from "@/assets/Projects/DatingApp/Dashboard with Menu.jpeg"
-import DatingAppLogin from "@/assets/Projects/DatingApp/login.jpeg"
+import DatingAppHome from "@/assets/Projects/DatingApp/Home.jpeg"
+import DatingAppMenu from "@/assets/Projects/DatingApp/SignUp.jpeg"
+import DatingAppLogin from "@/assets/Projects/DatingApp/Login.jpeg"
 import DatingAppAuthentication  from "@/assets/Projects/DatingApp/Authentication.jpeg"
-import DatingAppInternalError from "@/assets/Projects/DatingApp/internalerror.jpeg"
+import DatingAppProfile from "@/assets/Projects/DatingApp/Profile.jpeg"
+import DatingAppMatches from "@/assets/Projects/DatingApp/Matches.jpeg"
 
 export const projectsDescriptions = [
   {
@@ -63,7 +64,7 @@ export const projectsDescriptions = [
       {
         src: TaskTraceAddTask,
         title: "Adding a Task",
-        id: 1,
+        id: 5,
       }
     ],
     mobileImages: [TaskTraceHomePage,TaskTraceDashboard,TaskTraceLogin,TaskTraceMobile,TaskTraceAddTask],
@@ -216,12 +217,12 @@ export const projectsDescriptions = [
       },
       {
         src: DatingAppMenu,
-        title: "Home Menu",
+        title: "SignUp",
         id: 2,
       },
       {
-        src: DatingAppInternalError,
-        title: "Internal Error Catches",
+        src: DatingAppMatches,
+        title: "Maches",
         id: 3,
       },
       {
@@ -234,8 +235,13 @@ export const projectsDescriptions = [
         title: "Authentication",
         id: 5,
       },
+      {
+        src: DatingAppProfile,
+        title: "Profile",
+        id: 6,
+      },
     ],
-    mobileImages: [DatingAppHome,DatingAppMenu,DatingAppInternalError,DatingAppLogin,DatingAppAuthentication],
+    mobileImages: [DatingAppHome,DatingAppMenu,DatingAppMatches,DatingAppLogin,DatingAppAuthentication, DatingAppProfile],
     live: 'Not Yet',
     github: 'https://github.com/alfredoparreiras/Studies/tree/main/DatingApp'
   }
