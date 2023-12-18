@@ -72,7 +72,7 @@ const ShuffleGrid = ({ squareData }: ShuffleGridProps) => {
   const shuffleSquares = () => {
     setSquares(generateSquares(squareData));
 
-    timeoutRef.current = setTimeout(shuffleSquares, 5000);
+    timeoutRef.current = setTimeout(shuffleSquares, 6000);
   };
 
   return (

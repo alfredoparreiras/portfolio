@@ -2,6 +2,7 @@ import MainTitle from "@/components/MainTitle"
 import Me from "../../assets/me.jpeg"
 import { skills } from './skills';
 import Icons from "@/components/Icons";
+import Memoji from "@/assets/Memoji.png"
 
 
 
@@ -9,6 +10,14 @@ const WebAboutMe = () => {
   return (
     <section className="pb-10">
       <MainTitle title='Who Am I' />
+      {/* <div  className="flex  flex-col justify-center items-center lg:mt-16">
+        <div className="bg-offWhite min-h-full flex items-center justify-center">
+        <button className="px-6 py-2 font-medium bg-accentColor/50 text-white w-fit transition-all shadow-[3px_3px_0px_black] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]">
+        Reveal Me
+        </button>
+        </div>
+        <img src={Memoji} alt="" style={{ transform: 'translateX(3.5%)'}}/>
+      </div> */}
       <div className="flex w-full justify-between lg:pt-4">
         <div className=" w-5/12 text-xl">
           <p className="mb-3">

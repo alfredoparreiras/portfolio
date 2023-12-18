@@ -6,7 +6,6 @@ type Skill = {
   DarkImgUrl: string;
 };
 
-
 type IconsProp = {
   skill: Skill
 }

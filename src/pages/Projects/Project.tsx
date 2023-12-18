@@ -48,7 +48,7 @@ const Project = () => {
                 <p className=" bg-accentColor/80 text-white text-center py-2 lg:py-3 rounded-md dark:bg-darkAccentColor dark:text-darkBackground">Repository</p>
             </a>
             <a href="/whatidid" className="w-full lg:w-1/4" >
-                <p className=" bg-accentColor/40 text-white text-center py-2 lg:py-3 rounded-md  dark:bg-darkAccentColor dark:text-darkBackground">Projects</p>
+                <p className=" bg-accentColor/80 text-white text-center py-2 lg:py-3 rounded-md  dark:bg-darkAccentColor dark:text-darkBackground">Projects</p>
             </a>
         </div>
       </section>
