@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
 

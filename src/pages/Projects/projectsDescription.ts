@@ -27,7 +27,7 @@ import MoshifyPage5 from "@/assets/Projects/Moshify/Page5.jpeg"
 //DatingApp
 import DatingAppHome from "@/assets/Projects/DatingApp/Home.jpeg"
 import DatingAppMenu from "@/assets/Projects/DatingApp/SignUp.jpeg"
-import DatingAppLogin from "@/assets/Projects/DatingApp/Login.jpeg"
+import DatingAppLogin from "@/assets/Projects/DatingApp/login.jpeg"
 import DatingAppAuthentication  from "@/assets/Projects/DatingApp/Authentication.jpeg"
 import DatingAppProfile from "@/assets/Projects/DatingApp/Profile.jpeg"
 import DatingAppMatches from "@/assets/Projects/DatingApp/Matches.jpeg"

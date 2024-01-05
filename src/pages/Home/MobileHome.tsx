@@ -18,7 +18,7 @@ const MobileHome = () => {
 
 
   return (
-    <animated.div className="text-left text-4.5xl leading-10 mt-20 sm:hidden md:hidden onlyXsm:text-4xl px-12" style={fade}>
+    <animated.div className="text-left text-4.5xl leading-10 xsm:mt-10 md:hidden" style={fade}>
       <p>Hi, there!</p>
       <p className="mt-5">
         {" "}

@@ -31,23 +31,25 @@ function ArrowBottom({href}: ArrowBottomProps) {
   });
 
   return (
-    <animated.div className="flex flex-col items-center" style={fade}>
-            <a href={href}>
-              <motion.img
-                src={darkMode ? BottomArrowDark : BottomArrow}
-                alt=""
-                className=" w-20"
-                initial={{ rotate: "0deg" }}
-                animate={{ rotate: "360deg" }}
-                exit={{ rotate: "0deg" }}
-                transition={{
-                  duration: 1,
-                  type: backInOut,
-                }}
-              />
-            </a>
-      </animated.div>
-  )
+    <animated.div className="flex justify-center relative h-full" style={fade}>
+      <a
+        href={href}
+        className="absolute bottom-2 transform -translate-x-1/2 left-1/2">
+        <motion.img
+          src={darkMode ? BottomArrowDark : BottomArrow}
+          alt=""
+          className="w-20"
+          initial={{ rotate: "0deg" }}
+          animate={{ rotate: "360deg" }}
+          exit={{ rotate: "0deg" }}
+          transition={{
+            duration: 1,
+            type: backInOut,
+          }}
+        />
+      </a>
+    </animated.div>
+  );
 }
 
 export default ArrowBottom

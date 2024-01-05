@@ -1,5 +1,4 @@
 import {Routes,Route,useLocation} from "react-router-dom"
-
 import AboutMe from "./pages/AboutMe/AboutMe";
 import Header from "./components/Header";
 import Home from "./pages/Home/Home";
@@ -8,12 +7,7 @@ import Contact from "./pages/Contact/Contact";
 import { AnimatePresence } from "framer-motion";
 import Project from "./pages/Projects/Project";
 
-
-
-
-
 function App() {
-  
   const location = useLocation(); 
 
   return (

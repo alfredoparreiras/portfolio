@@ -1,14 +1,13 @@
 import MainTitle from "@/components/MainTitle"
 import { projectsDescriptions as projects } from "./projectsDescription";
 import TopRigthArrow from "@/assets/Icons/ArrowTopRight.svg"
-import MobileCarousel from "@/components/MobileCarousel";
-
 
 const WebProjects = () => {
   return (
     <section className="">
       <MainTitle title="What I Did" />
         <div className="my-10 px-4 grid grid-cols-3 gap-8">
+          
           {projects.map((project, index) => {
             return (
               <div key={index} className="mb-14" id={`mobileProjects${index}`}>
@@ -18,8 +17,12 @@ const WebProjects = () => {
                     <img src={TopRigthArrow} alt="" className="w-3 h-3" />
                   </div>
                   <div className="group relative inline-block">
-                    <img src={project.mobileImages[0]} className="block w-full h-auto transition-opacity" alt="" />
-                    <div className="overlay absolute inset-0 bg-accentColor/50 dark:bg-darkAccentColor/50 transition-opacity group-hover:opacity-0 duration-700"></div>
+                    <img
+                      src={project.mobileImages[0]}
+                      className="block w-full h-auto transition-opacity rounded-xl"
+                      alt=""
+                    />
+                    <div className="overlay absolute inset-0 bg-accentColor/50 dark:bg-darkAccentColor/50 transition-opacity group-hover:opacity-0 duration-700 rounded-xl"></div>
                   </div>
                   <div className="px-1">
                     <div className="mt-5 grid grid-cols-3 gap-3">
@@ -30,7 +33,6 @@ const WebProjects = () => {
                             className=" rounded-xl bg-accentColor/30 dark:bg-darkAccentColor/90 p-1 text-center text-sm"
                           >
                             {tool}
-                            {}
                           </p>
                         );
                       })}

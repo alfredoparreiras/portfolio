@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import React, { ComponentType } from 'react';
+import { ComponentType } from 'react';
 
 const transition = (OgComponent: ComponentType) => {
   // Nomeie a função de componente retornada
@@ -11,14 +11,14 @@ const transition = (OgComponent: ComponentType) => {
         initial={{ scaleY: 0 }}
         animate={{ scaleY: 0 }}
         exit={{ scaleY: 1 }}
-        transition={{ duration: 1.75, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
       />
       <motion.div
         className="slide-out"
         initial={{ scaleY: 1 }}
         animate={{ scaleY: 0 }}
         exit={{ scaleY: 0 }}
-        transition={{ duration: 1.75, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
       />
     </>
   );

@@ -19,7 +19,7 @@ const ShuffleHero = ({ squareData }: ShuffleHeroProps) => {
   );
 };
 
-const shuffle = (array) => {
+const shuffle = (array : Project[]) => {
   let currentIndex = array.length,
     randomIndex;
 
@@ -36,7 +36,7 @@ const shuffle = (array) => {
   return array;
 };
 
-const generateSquares = (data) => {
+const generateSquares = (data: Project[]) => {
   return shuffle(data).map((sq) => (
     <motion.div
       key={sq.id}
@@ -72,7 +72,7 @@ const ShuffleGrid = ({ squareData }: ShuffleGridProps) => {
   const shuffleSquares = () => {
     setSquares(generateSquares(squareData));
 
-    timeoutRef.current = setTimeout(shuffleSquares, 6000);
+    timeoutRef.current = setTimeout(shuffleSquares, 6000) as unknown as number;
   };
 
   return (
