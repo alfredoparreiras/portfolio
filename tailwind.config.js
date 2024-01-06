@@ -44,7 +44,7 @@ export default  {
       height : { 
         'sectionVh': '91.5vh',
         'mobileHeaderVh': '7.5vh',
-      }
+      },
     },
   },
   plugins: [],

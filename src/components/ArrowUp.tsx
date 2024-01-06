@@ -1,5 +1,5 @@
-import UpArrow from '@/assets/Icons/UpArrow.svg'
-import UpArrowDark from '@/assets/Icons/UpArrowDark.svg'
+import UpArrow from '@/assets/Icons/Arrows/ArrowUpLightMode.svg'
+import UpArrowDark from '@/assets/Icons/Arrows/ArrowUpDarkMode.svg'
 import { useSpring, animated } from "@react-spring/web";
 import { backInOut, motion } from "framer-motion";
 import { useEffect, useState } from 'react';
@@ -33,23 +33,23 @@ function ArrowUp({href}: ArrowBottomProps) {
   });
 
   return (
-    <animated.div className="flex flex-col items-center" style={fade}>
-            <a href={href}>
-              <motion.img
-                src={darkMode ? UpArrowDark : UpArrow}
-                alt=""
-                className=" w-20"
-                initial={{ rotate: "0deg" }}
-                animate={{ rotate: "360deg" }}
-                exit={{ rotate: "0deg" }}
-                transition={{
-                  duration: 1,
-                  type: backInOut,
-                }}
-              />
-            </a>
-      </animated.div>
-  )
+    <animated.div className="absolute bottom-0 left-0" style={fade}>
+      <a href={href}>
+        <motion.img
+          src={darkMode ? UpArrowDark : UpArrow}
+          alt=""
+          className="w-8"
+          initial={{ rotate: "0deg" }}
+          animate={{ rotate: "360deg" }}
+          exit={{ rotate: "0deg" }}
+          transition={{
+            duration: 1,
+            type: backInOut,
+          }}
+        />
+      </a>
+    </animated.div>
+  );
 }
 
 export default ArrowUp

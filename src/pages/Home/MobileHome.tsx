@@ -27,7 +27,7 @@ const MobileHome = () => {
       </p>
       <p className="mt-5">
         {" "}
-        Dedicate about <span className="text-accentColor">solving problems</span> through{" "}
+        Dedicated about <span className="text-accentColor">solving problems</span> through{" "}
         <span className="text-accentColor">code</span>
       </p>
       <p className="mt-5">

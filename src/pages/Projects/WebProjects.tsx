@@ -1,10 +1,10 @@
 import MainTitle from "@/components/MainTitle"
 import { projectsDescriptions as projects } from "./projectsDescription";
-import TopRigthArrow from "@/assets/Icons/ArrowTopRight.svg"
+import ArrowRight from "@/components/ArrowRight";
 
 const WebProjects = () => {
   return (
-    <section className="">
+    <section className="pb-20">
       <MainTitle title="What I Did" />
         <div className="my-10 px-4 grid grid-cols-3 gap-8">
           
@@ -14,7 +14,7 @@ const WebProjects = () => {
                 <a href={`project/${project.id}`}>
                   <div className="flex items-center mb-3">
                     <h1 className="text-xl me-1"> {project.title}</h1>
-                    <img src={TopRigthArrow} alt="" className="w-3 h-3" />
+                    <ArrowRight />
                   </div>
                   <div className="group relative inline-block">
                     <img

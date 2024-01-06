@@ -1,6 +1,6 @@
 import { projectsDescriptions as projects } from "./projectsDescription";
 import MobileCarousel from "@/components/MobileCarousel";
-import TopRigthArrow from "@/assets/Icons/ArrowTopRight.svg"
+import ArrowRight from "@/components/ArrowRight";
 import MainTitle from "@/components/MainTitle";
 
 
@@ -16,7 +16,7 @@ const MobileProjects = () => {
                 <a href={`project/${project.id}`}>
                   <div className="flex items-center mb-3">
                     <h1 className="text-xl me-1"> {project.title}</h1>
-                    <img src={TopRigthArrow} alt="" className="w-3 h-3" />
+                    <ArrowRight />
                   </div>
                     <MobileCarousel images={project.mobileImages} />
                   <div className="px-1">

@@ -4,7 +4,7 @@ const Form = () => {
     <div className="justify-star flex items-center mt-10">
       <div className="mx-auto lg:mx-0 w-full max-w-lg">
         <p className="mt-3">
-          Email me at <a href="mailto:contact@as.com" ><span className=" text-accentColor dark:text-darkAccentColor">contact@as.com</span></a>{" "}
+          Email me at <a href="mailto:a.alfredops@gmail.com" ><span className=" text-accentColor dark:text-darkAccentColor">a.alfredops@gmail.com</span></a>{" "}
           or message me here:
         </p>
 

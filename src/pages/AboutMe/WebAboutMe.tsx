@@ -7,7 +7,7 @@ import Icons from "@/components/Icons";
 
 const WebAboutMe = () => {
   return (
-    <section className="pb-10">
+    <section className=" pb-36">
       <MainTitle title="Who Am I" />
       <div className="flex w-full justify-between lg:pt-4">
         <div className="w-5/12 text-xl">

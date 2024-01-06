@@ -1,5 +1,5 @@
-import BottomArrow from '@/assets/Icons/BottomArrow.svg'
-import BottomArrowDark from '@/assets/Icons/BottomArrowDark.svg'
+import BottomArrow from '@/assets/Icons/Arrows/ArrowDownLightMode.svg'
+import BottomArrowDark from "@/assets/Icons/Arrows/ArrowDownDarkMode.svg";
 import { useSpring, animated } from "@react-spring/web";
 import { backInOut, motion } from "framer-motion";
 import { useEffect, useState } from 'react';
@@ -31,24 +31,24 @@ function ArrowBottom({href}: ArrowBottomProps) {
   });
 
   return (
-    <animated.div className="flex justify-center relative h-full" style={fade}>
-      <a
-        href={href}
-        className="absolute bottom-2 transform -translate-x-1/2 left-1/2">
-        <motion.img
-          src={darkMode ? BottomArrowDark : BottomArrow}
-          alt=""
-          className="w-20"
-          initial={{ rotate: "0deg" }}
-          animate={{ rotate: "360deg" }}
-          exit={{ rotate: "0deg" }}
-          transition={{
-            duration: 1,
-            type: backInOut,
-          }}
-        />
-      </a>
-    </animated.div>
+    <animated.a
+      href={href}
+      className="absolute right-0 -bottom-8 lg:bottom-8 lg:transform lg:-translate-x-1/2 lg:left-1/2"
+      style={fade}
+    >
+      <motion.img
+        src={darkMode ? BottomArrowDark : BottomArrow}
+        alt=""
+        className="w-8"
+        initial={{ rotate: "0deg" }}
+        animate={{ rotate: "360deg" }}
+        exit={{ rotate: "0deg" }}
+        transition={{
+          duration: 1,
+          type: backInOut,
+        }}
+      />
+    </animated.a>
   );
 }
 

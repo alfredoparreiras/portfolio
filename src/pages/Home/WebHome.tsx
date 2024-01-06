@@ -29,7 +29,7 @@ const Trail: React.FC<{ open: boolean; children: React.ReactNode }> = ({
 const WebHome = () => {
   const [open, set] = useState(true);
   return (
-    <section className="flex px-12 flex-col justify-center h-4/5 text-left text-7xl md:block xsm:hidden ">
+    <section className="flex px-12 flex-col justify-center text-left text-7xl md:block xsm:hidden ">
       <div className={styles.container} onClick={() => set((state) => !state)}>
         <Trail open={open}>
           <span className="dark:text-offwhite">Hi, there!</span>
@@ -38,7 +38,7 @@ const WebHome = () => {
           </span>
           <span className="dark:text-offwhite">a <span className="text-accentColor dark:text-darkAccentColor"> Software Developer</span></span>
           <span className="dark:text-offwhite">
-            Dedicate about <span className="text-accentColor dark:text-darkAccentColor">solving</span>
+            Dedicated about <span className="text-accentColor dark:text-darkAccentColor">solving</span>
           </span>
           <span className="text-accentColor dark:text-darkAccentColor">
             problems <span className="dark:text-offwhite">through</span> <span className="text-accentColor dark:text-darkAccentColor">code</span>
