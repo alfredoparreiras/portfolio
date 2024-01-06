@@ -15,9 +15,9 @@ html, body, #root, .app{
   font-family: "DM Sans", sans-serif;
 }
 
-#root {
+/* #root {
   padding:2rem 2rem 0 2rem;
-}
+} */
 
 .slide-in{
   position: fixed;
@@ -79,6 +79,22 @@ html, body, #root, .app{
   #root, 
   .app{ 
     zoom: 1.8;
+  }
+}
+
+@media screen and (max-width:430px) and (min-height: 800px){
+  .tallDevice{
+    font-size: 3.5rem;
+    margin-top: 4.5rem;
+    line-height: 3.25rem;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .smallDevice{
+    font-size: 2rem;
+    line-height: 2.25rem;
+
   }
 }
 

@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 
-export default  {
+export default {
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -27,11 +27,11 @@ export default  {
         myBlack: "#3B4041",
         accentColor: "#24527A",
         darkAccentColor: "#82e2c6",
-        darkBackground: "#252f42"
+        darkBackground: "#252f42",
       },
       screens: {
-        xsm: '100px',
-        sm: '400px',
+        xsm: "100px",
+        sm: "400px",
         md: "760px",
         lg: "1080px",
       },
@@ -39,11 +39,12 @@ export default  {
         icon: "32px",
       },
       fontSize: {
-        '4.5xl': '2.750rem',
-      }, 
-      height : { 
-        'sectionVh': '91.5vh',
-        'mobileHeaderVh': '7.5vh',
+        "4.5xl": "2.750rem",
+        "5.5lx": "3.50rem"
+      },
+      height: {
+        sectionVh: "91.5vh",
+        mobileHeaderVh: "7.5vh",
       },
     },
   },

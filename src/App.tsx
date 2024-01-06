@@ -12,14 +12,14 @@ function App() {
 
   return (
     <>
-      <main className="dark:bg-darkBackground dark:text-white">
-        <Header/>
+      <main className="relative min-h-screen lg:min-h-[760px] px-8 pt-8 dark:bg-darkBackground dark:text-white">
+        <Header />
         <AnimatePresence mode="wait">
-            <Routes location={location} key={location.pathname}>
-            <Route index element={<Home/>} />
-            <Route path="/whoami" element={<AboutMe/>} />
-            <Route path="/whatidid" element={<Projects/>} />
-            <Route path="/howtofindme" element={<Contact/>} />
+          <Routes location={location} key={location.pathname}>
+            <Route index element={<Home />} />
+            <Route path="/whoami" element={<AboutMe />} />
+            <Route path="/whatidid" element={<Projects />} />
+            <Route path="/howtofindme" element={<Contact />} />
             <Route path="/project/:id" element={<Project />} />
           </Routes>
         </AnimatePresence>
