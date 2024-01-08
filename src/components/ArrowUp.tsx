@@ -33,7 +33,7 @@ function ArrowUp({href}: ArrowBottomProps) {
   });
 
   return (
-    <animated.div className="absolute bottom-0 left-0" style={fade}>
+    <animated.div className="absolute bottom-12 right-8" style={fade}>
       <a href={href}>
         <motion.img
           src={darkMode ? UpArrowDark : UpArrow}

@@ -38,8 +38,7 @@ export const projectsDescriptions = [
     title: "TaskTrace",
     mainLanguage: "Java - JavaEE",
     description: `TaskTrace is a task management tool that simplifies tracking tasks for both individuals. It provides an easy overview of each task's progress from start to end, improving efficiency.`,
-    tools: ['IntelliJ', 'Docker', 'TomCat', 'Bootstrap', 'MySQL', 'VPS'],
-    homeTools: ['JavaEE','Docker'],
+    tools: ['JavaEE', 'Docker','TomCat', 'Bootstrap', 'MySQL', 'VPS'],
     images: [
       {
         src: TaskTraceHomePage,
@@ -68,7 +67,7 @@ export const projectsDescriptions = [
       }
     ],
     mobileImages: [TaskTraceHomePage,TaskTraceDashboard,TaskTraceLogin,TaskTraceMobile,TaskTraceAddTask],
-    live: 'http://tasktrace.app',
+    live: 'https://tasktrace.app',
     github: 'https://github.com/alfredoparreiras/TaskTrace'
   },
   {
@@ -76,8 +75,7 @@ export const projectsDescriptions = [
     title: "FoodNinja API Documentation",
     mainLanguage: "Typescript",
     description: `The website provides documentation for the FoodNinja API, a comprehensive resource for developers looking to integrate or utilize FoodNinja's services in their applications`,
-    tools: ['VSCode', 'Vercel', 'Tawilwind', 'MarkDown'],
-    homeTools: ['Typescript', 'React'],
+    tools: ['Typescript', 'React', 'Vercel', 'Tawilwind'],
     images: [
       {
         src: FoodDocsHomeWhite,
@@ -119,8 +117,7 @@ export const projectsDescriptions = [
     title: "FoodNinja API",
     mainLanguage: "Javascript",
     description: `This backend service, crafted using MySQL, NodeJS, and Sequelize, forms the core of a dynamic recipe application. Built primarily in JavaScript, it offers a robust platform for users to engage with a wide array of culinary delights.`,
-    tools: ['ExpressJS','MySQL', 'DataGrip', 'Sequelize', 'VSCode'],
-    homeTools: ['Javascript', 'NodeJS'],
+    tools: ['Javascript','NodeJS','MySQL','Sequelize'],
     images: [
       {
         src: FoodAPILogin,
@@ -154,7 +151,7 @@ export const projectsDescriptions = [
       }
     ],
     mobileImages: [FoodAPILogin,FoodAPISignUp,FoodAPIRecipes,FoodAPIFavorites,FoodAPIRemoveFavorite,FoodAPIChefs],
-    live: 'not yet',
+    live: undefined,
     github: 'https://github.com/alfredoparreiras/FoodNinjaBackEnd',
     contributors: ['Gabriela Franco', 'Jared Chevalier', 'Rehman Basharat']
   },
@@ -163,8 +160,7 @@ export const projectsDescriptions = [
     title: "Moshify",
     mainLanguage: "Javascript - HTML - CSS",
     description: `Webtemplate for a company who sells clouding plans. `,
-    tools: ['VSCode'],
-    homeTools: ['Javascript', 'VSCode'],
+    tools: ['HTML5', 'CSS3', 'Javascript'],
     images: [
       {
         src: MoshifyHome,
@@ -206,8 +202,7 @@ export const projectsDescriptions = [
     title: "Dating App",
     mainLanguage: "Typescript - C#",
     description: `Dating App is a minimalist dating platform designed to focus your experience of finding love and friendship in the digital age. Our intuitive app focuses on simplicity and instant connections, much like Tinder, but with our unique twist.`,
-    tools: ['ASP.net','Angular', 'VSCode', 'SQLite', 'Entity Framework'],
-    homeTools: ['ASP.net', 'Angular'],
+    tools: ['ASP.net','Angular','SQLite', 'Entity Framework'],
     status: "In progress",
     images: [
       {
@@ -242,7 +237,7 @@ export const projectsDescriptions = [
       },
     ],
     mobileImages: [DatingAppHome,DatingAppMenu,DatingAppMatches,DatingAppLogin,DatingAppAuthentication, DatingAppProfile],
-    live: 'Not Yet',
+    live: undefined,
     github: 'https://github.com/alfredoparreiras/Studies/tree/main/DatingApp'
   }
 ]

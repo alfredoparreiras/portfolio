@@ -7,7 +7,7 @@ import Icons from "@/components/Icons";
 
 const WebAboutMe = () => {
   return (
-    <section className=" pb-36">
+    <section className="pb-36 hidden lg:block">
       <MainTitle title="Who Am I" />
       <div className="flex w-full justify-between lg:pt-4">
         <div className="w-5/12 text-xl">
@@ -48,7 +48,7 @@ const WebAboutMe = () => {
             <img
               src={Me}
               alt="Alfredo's Photo"
-              className=" max-w-md grayscale hover:grayscale-0 transition duration-500 rounded-2xl"
+              className="max-w-md grayscale hover:grayscale-0 transition duration-500 rounded-2xl"
             />
           </div>
         </div>

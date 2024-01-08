@@ -4,7 +4,7 @@ import ArrowRight from "@/components/ArrowRight";
 
 const WebProjects = () => {
   return (
-    <section className="pb-20">
+    <section className="hidden lg:block">
       <MainTitle title="What I Did" />
         <div className="my-10 px-4 grid grid-cols-3 gap-8">
           
@@ -26,7 +26,7 @@ const WebProjects = () => {
                   </div>
                   <div className="px-1">
                     <div className="mt-5 grid grid-cols-3 gap-3">
-                      {project.homeTools.map((tool, index) => {
+                      {project.tools.map((tool, index) => {
                         return (
                           <p
                             key={index}

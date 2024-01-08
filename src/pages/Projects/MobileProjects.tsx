@@ -7,34 +7,44 @@ import MainTitle from "@/components/MainTitle";
 const MobileProjects = () => {
   return (
     <>
-      <section id="mobileProjects" className=" h-min-screen md:hidden" >
-      <MainTitle title="What I Did" />
-        <div className="my-10 px-4 flex flex-col">
+      <section
+        id="mobileProjects"
+        className="pb-20 xsm:mt-10 sm:mt-14 h-min-screen lg:hidden"
+      >
+        <MainTitle title="What I Did" />
+        <div className="my-10 flex flex-col">
           {projects.map((project, index) => {
             return (
               <div key={index} className="mb-14" id={`mobileProjects${index}`}>
-                <a href={`project/${project.id}`}>
-                  <div className="flex items-center mb-3">
-                    <h1 className="text-xl me-1"> {project.title}</h1>
-                    <ArrowRight />
-                  </div>
-                    <MobileCarousel images={project.mobileImages} />
-                  <div className="px-1">
-                    <div className="mt-5 grid grid-cols-3 gap-3">
-                      {project.homeTools.map((tool, index) => {
-                        return (
-                          <p
-                            key={index}
-                            className=" rounded-lg bg-myBlack/20 p-1 text-center text-sm"
-                          >
-                            {tool}
-                            {}
-                          </p>
-                        );
-                      })}
+                <div className="flex items-center mb-3">
+                  <h1 className="text-xl me-1"> {project.title}</h1>
+                  {project.live ? (
+                    <a href={project.live} target="_blank">
+                      <ArrowRight />
+                    </a>
+                  ) : (
+                    <div className="translate-y-[2px]">
+                      <span className="ms-1 text-zinc-400 ">In Progress</span>
                     </div>
+                  )}
+                </div>
+                <MobileCarousel images={project.mobileImages} />
+                <p className="mt-4 text-sm">{project.description}</p>
+                <div className="mt-6">
+                  <div className="mt-5 grid grid-cols-3 gap-3">
+                    {project.tools.map((tool, index) => {
+                      return (
+                        <p
+                          key={index}
+                          className=" rounded bg-accentColor/60 p-1 text-offwhite text-center text-sm"
+                        >
+                          {tool}
+                          {}
+                        </p>
+                      );
+                    })}
                   </div>
-                </a>
+                </div>
               </div>
             );
           })}
