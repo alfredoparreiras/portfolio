@@ -23,17 +23,17 @@ const MobileHome = () => {
       <p className="mt-5">
         {" "}
         I'm Alfredo, a{" "}
-        <span className="text-accentColor">Software Developer</span>
+        <span className="text-accentColor dark:text-darkAccentColor">Software Developer</span>
       </p>
       <p className="mt-5">
         {" "}
-        Dedicated about <span className="text-accentColor">solving problems</span> through{" "}
-        <span className="text-accentColor">code</span>
+        Dedicated about <span className="text-accentColor dark:text-darkAccentColor">solving problems</span> through{" "}
+        <span className="text-accentColor dark:text-darkAccentColor">code</span>
       </p>
       <p className="mt-5">
         {" "}
         I'm currently based in{" "}
-        <span className="text-accentColor">Montreal</span>.
+        <span className="text-accentColor dark:text-darkAccentColor">Montreal</span>
       </p>
     </animated.div>
   );
