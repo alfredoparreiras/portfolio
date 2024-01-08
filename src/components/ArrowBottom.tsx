@@ -39,7 +39,7 @@ function ArrowBottom({href}: ArrowBottomProps) {
       <motion.img
         src={darkMode ? BottomArrowDark : BottomArrow}
         alt=""
-        className="w-8"
+        className="w-8 z-0 "
         initial={{ rotate: "0deg" }}
         animate={{ rotate: "360deg" }}
         exit={{ rotate: "0deg" }}
@@ -49,6 +49,8 @@ function ArrowBottom({href}: ArrowBottomProps) {
         }}
       />
     </animated.a>
+
+
   );
 }
 

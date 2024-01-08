@@ -6,11 +6,11 @@ import ArrowBottom from '@/components/ArrowBottom';
 
 const AboutMe = () => {
   return (
-      <section id='whoami' className='relative pb-32 lg:pt-10 '>
-        <MobileAboutMe />
-        <WebAboutMe />
-        <ArrowBottom href="/whatidid"/>
-      </section>
+    <section id="whoami" className="relative pb-32 lg:pt-10 ">
+      <MobileAboutMe />
+      <WebAboutMe />
+      <ArrowBottom href="/whatidid" />
+    </section>
   );
 }
 
