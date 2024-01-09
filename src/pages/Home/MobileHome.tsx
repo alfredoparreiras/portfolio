@@ -1,8 +1,5 @@
 import { useSpring, animated } from "@react-spring/web";
 
-
-
-
 const MobileHome = () => {
 
   const fade = useSpring({
@@ -15,9 +12,8 @@ const MobileHome = () => {
       friction: 26},
   });
 
-
   return (
-    <animated.div className="text-left text-4.5xl xsm:mt-10 sm:mt-14 leading-10 md:hidden tallDevice smallDevice" style={fade}>
+    <animated.div className="mt-8 pb-5 text-left text-4.5xl leading-10 md:hidden tallDevice smallDevice" style={fade}>
       <p>Hi, there!</p>
       <p className="mt-5">
         {" "}

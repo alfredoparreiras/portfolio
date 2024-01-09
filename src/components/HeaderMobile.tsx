@@ -23,7 +23,11 @@ const routes = [
 
 const HeaderMobile = () => {
   const [isOpen, setOpen] = useState(false);
+  const [position, setPosition] = useState(window.scrollY); 
 
+  window.addEventListener('scroll', ()=> {
+    setPosition(window.scrollY);
+  })
   const toggleMenu = () => {
     setOpen(!isOpen)
   }
@@ -102,7 +106,11 @@ const HeaderMobile = () => {
   };
   return (
     <header
-      className={`w-full sticky top-0 flex items-center justify-between z-50 md:hidden`}
+      className={
+        position >= 20
+          ? "w-full sticky top-0 flex items-center bg-accentColor text-offwhite dark:bg-darkAccentColor dark:text-accentColor justify-between px-8 py-5 z-50 md:hidden"
+          : `w-full sticky top-0 flex items-center justify-between z-50 px-8 py-5 md:hidden`
+      }
     >
       <Link to={"/"}>
         {" "}

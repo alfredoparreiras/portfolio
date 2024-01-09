@@ -33,7 +33,7 @@ function ArrowBottom({href}: ArrowBottomProps) {
   return (
     <animated.a
       href={href}
-      className="absolute bottom-5 right-8 lg:right-1/2 "
+      className="absolute -bottom-14 right-5 lg:right-1/2 pb-5 "
       style={fade}
     >
       <motion.img

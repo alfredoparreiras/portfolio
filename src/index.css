@@ -85,7 +85,6 @@ html, body, #root, .app{
 @media screen and (max-width:430px) and (min-height: 800px){
   .tallDevice{
     font-size: 3.5rem;
-    margin-top: 4.5rem;
     line-height: 3.25rem;
   }
 }
@@ -93,7 +92,6 @@ html, body, #root, .app{
 @media screen and (max-width:430px) and (min-height: 800px){
   .tallDevice{
     font-size: 3.5rem;
-    margin-top: 4.5rem;
     line-height: 3.25rem;
   }
 }

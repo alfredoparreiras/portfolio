@@ -9,7 +9,7 @@ const MobileProjects = () => {
     <>
       <section
         id="mobileProjects"
-        className="pb-20 xsm:mt-10 sm:mt-14 h-min-screen lg:hidden"
+        className="h-min-screen lg:hidden"
       >
         <MainTitle title="What I Did" />
         <div className="my-10 flex flex-col">

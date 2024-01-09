@@ -6,7 +6,7 @@ import MainTitle from '@/components/MainTitle';
 
 const MobileAboutMe = () => {
   return (
-    <section className="xsm:mt-10 sm:mt-14 lg:hidden">
+    <section className="lg:hidden">
       <MainTitle changeStyle={"w-full"} title="Who Am I" />
       <div className="flex flex-col items-center">
         <div className="mt-10 w-screen flex justify-center">

@@ -12,8 +12,8 @@ function App() {
 
   return (
     <>
-      <main className="relative min-h-screen md:min-h-full px-8 pt-8 dark:bg-darkBackground dark:text-white">
-        <Header/>
+      <Header/>
+      <main className="relative min-h-full md:min-h-full px-8 dark:bg-darkBackground dark:text-white">
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route index element={<Home />} />
