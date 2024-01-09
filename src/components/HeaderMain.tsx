@@ -3,7 +3,7 @@ import ResumeButtom from "./ResumeButtom";
 
 const HeaderMain = () => {
   return (
-    <header className="xsm:hidden md:flex justify-between">
+    <header className="xsm:hidden md:flex justify-between px-8 py-5">
       <a href="/">
         <p className="font-JetBrains">{"{ AScode }"}</p>
       </a>
