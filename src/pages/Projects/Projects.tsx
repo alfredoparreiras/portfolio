@@ -5,7 +5,7 @@ import ArrowBottom from "@/components/ArrowBottom"
 
 const Projects = () => {
   return (
-      <section id='whatidid' className=' lg:pt-10'>
+      <section id='whatidid' className='lg:min-h-[1150px] lg:pt-10'>
         <MobileProjects />
         <WebProjects/>
         <ArrowBottom href="/howtofindme"/>

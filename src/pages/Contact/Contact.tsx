@@ -6,7 +6,7 @@ import Social from '@/components/Social'
 
 const Contact = () => {
   return (
-    <section id="howtofindme" className="min-h-[760px] lg:mt-10">
+    <section id="howtofindme" className="min-h-[760px] lg:min-h-full lg:mt-10">
       <MobileContact />
       <WebContact />
       <section className="socialIcons flex justify-start lg:mt-20 ">

@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      <main className="relative min-h-screen lg:min-h-[800px] px-8 pt-8 dark:bg-darkBackground dark:text-white">
+      <main className="relative min-h-screen md:min-h-full px-8 pt-8 dark:bg-darkBackground dark:text-white">
         <Header/>
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>

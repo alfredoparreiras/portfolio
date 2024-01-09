@@ -43,9 +43,10 @@ const WebHome = () => {
         variants={containerVariants}
         initial="initial"
         animate="open"
-        className="md:flex px-12 flex-col justify-center leading-[5rem] text-left text-7xl lg:w-2/3 xsm:hidden "
+        className="md:flex px-12 flex-col justify-center leading-[5rem] text-left text-7xl lg:text-6xl lg:leading-[3.5rem] lg:w-3/5 xsm:hidden tabletRotated"
       >
-        <div className="overflow-hidden"><motion.p variants={introductionVariants}>Hi, there!</motion.p></div>
+        <div className="overflow-hidden">
+          <motion.p variants={introductionVariants}>Hi, there!</motion.p></div>
         <div className="overflow-hidden">
           <motion.p variants={introductionVariants} className="mt-5">
             {" "}
@@ -62,7 +63,8 @@ const WebHome = () => {
             <span className="text-accentColor dark:text-darkAccentColor">
               solving problems
             </span>{" "}
-            through{" "}
+            via
+            {" "}
             <span className="text-accentColor dark:text-darkAccentColor">
               code
             </span>
