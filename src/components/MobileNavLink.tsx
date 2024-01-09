@@ -3,7 +3,8 @@ import { motion } from 'framer-motion'
 
 type MobileNavLinkProps = {
   title: string, 
-  href: string
+  href: string, 
+  onClick: ()=> void; 
 }
 
 const mobileLinkVars = {
@@ -23,10 +24,10 @@ const mobileLinkVars = {
   },
 };
 
-const MobileNavLink = ({title, href}: MobileNavLinkProps) => {
+const MobileNavLink = ({title, href, onClick}: MobileNavLinkProps) => {
   return (
     <motion.div variants={mobileLinkVars}>
-      <Link to={href}>
+      <Link to={href} onClick={onClick}>
         {title}
       </Link>
     </motion.div>

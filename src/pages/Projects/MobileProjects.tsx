@@ -36,7 +36,7 @@ const MobileProjects = () => {
                       return (
                         <p
                           key={index}
-                          className=" rounded bg-accentColor/60 p-1 text-offwhite text-center text-sm"
+                          className=" rounded bg-accentColor/60 p-1 text-offwhite text-center text-sm dark:bg-darkAccentColor dark:text-accentColor"
                         >
                           {tool}
                           {}

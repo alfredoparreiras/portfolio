@@ -9,7 +9,7 @@ const MobileHome = () => {
     from: { opacity: 0 },
     opacity: 1,
     config: { 
-      duration: 3000, 
+      duration: 5000, 
       mass: 100,
       tension: 170,
       friction: 26},
