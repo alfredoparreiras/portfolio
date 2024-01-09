@@ -3,6 +3,8 @@ import "./teste.css";
 import { Link } from "react-router-dom";
 import MobileNavLink from "./MobileNavLink";
 import { AnimatePresence, motion } from "framer-motion";
+import { IoDocumentOutline } from "react-icons/io5";
+import CV from '@/assets/ALFREDO SILVA  - CV .pdf'
 
 const routes = [
   {
@@ -81,6 +83,23 @@ const HeaderMobile = () => {
     },
   };
 
+  const resumeVariations = {
+    initial: {
+      y: "80vh",
+      transition: {
+        duration: 0.3,
+        ease: [0.37, 0, 0.63, 1],
+      },
+    },
+    open: {
+      y: 0,
+      transition: {
+        delay:0.8, 
+        duration: 0.5,
+        ease: [0, 0.55, 0.45, 1],
+      },
+    },
+  };
   return (
     <header
       className={`w-full sticky top-0 flex items-center justify-between z-50 md:hidden`}
@@ -128,7 +147,7 @@ const HeaderMobile = () => {
             >
               {routes.map((link, index) => {
                 return (
-                  <div className="overflow-hidden mt-2" key={index}>
+                  <div className="overflow-hidden mt-2 smallDevice" key={index}>
                     <MobileNavLink
                       title={link.title}
                       href={link.href}
@@ -137,6 +156,17 @@ const HeaderMobile = () => {
                   </div>
                 );
               })}
+              <motion.div
+                variants={resumeVariations}
+                initial="initial"
+                animate="open"
+                className="flex bg-accentColor text-white py-2 px-4 rounded-lg smallDevice"
+              >
+                <IoDocumentOutline />
+                <a href={CV} target="_blank">
+                  Resume
+                </a>
+              </motion.div>
             </motion.div>
             <motion.div
               variants={contactVariations}

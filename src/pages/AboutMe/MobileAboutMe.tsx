@@ -1,3 +1,4 @@
+import Icons from "@/components/Icons";
 import Me from "../../assets/me.jpeg"
 import { skills } from './skills';
 import MainTitle from '@/components/MainTitle';
@@ -40,11 +41,7 @@ const MobileAboutMe = () => {
               return (
                 <div key={index} className="">
                   <div className="flex flex-col items-center">
-                    <img
-                      src={item.imgUrl}
-                      alt={`${item.name}' icons'`}
-                      className="max-w-icon"
-                    />
+                    <Icons skill={item} />
                     <p>{item.name}</p>
                   </div>
                 </div>
