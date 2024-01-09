@@ -13,8 +13,8 @@ const Project = () => {
     <>
       <section className="lg:mt-10 lg:pb-10 px-6">
         <h1 className="text-3xl text-accentColor dark:text-darkAccentColor">{project.title}</h1>
-        {project.live.toLowerCase() !== 'not yet' && <a href={project.live} target="_blank" rel="noopener noreferrer" >
-          <p className="mb-12 text-sky-600 font-semibold dark:text-darkAccentColor">{project.live.split('://')[1]}</p>
+        {project?.live?.toLowerCase() !== undefined && <a href={project.live} target="_blank" rel="noopener noreferrer" >
+          <p className="mb-12 text-sky-600 font-semibold dark:text-darkAccentColor">{project?.live.split('://')[1]}</p>
         </a>}
         <ShuffleHero squareData={project.images} />
         <p className="text-accentColor  dark:text-darkAccentColor text-xl mt-5">{project.mainLanguage}</p>

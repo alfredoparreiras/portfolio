@@ -85,7 +85,7 @@ const HeaderMobile = () => {
 
   const resumeVariations = {
     initial: {
-      y: "80vh",
+      y: "30vh",
       transition: {
         duration: 0.3,
         ease: [0.37, 0, 0.63, 1],
@@ -156,17 +156,19 @@ const HeaderMobile = () => {
                   </div>
                 );
               })}
-              <motion.div
-                variants={resumeVariations}
-                initial="initial"
-                animate="open"
-                className="flex bg-accentColor text-white py-2 px-4 rounded-lg smallDevice"
-              >
-                <IoDocumentOutline />
-                <a href={CV} target="_blank">
-                  Resume
-                </a>
-              </motion.div>
+              <div className="overflow-hidden">
+                <motion.div
+                  variants={resumeVariations}
+                  initial="initial"
+                  animate="open"
+                  className="flex bg-accentColor text-white py-2 px-4 rounded-lg smallDevice"
+                >
+                  <IoDocumentOutline />
+                  <a href={CV} target="_blank">
+                    Resume
+                  </a>
+                </motion.div>
+              </div>
             </motion.div>
             <motion.div
               variants={contactVariations}

@@ -13,7 +13,7 @@ const MobileAboutMe = () => {
           <img
             src={Me}
             alt=""
-            className=" w-3/4 grayscale hover:grayscale-0 transition duration-500 rounded-2xl"
+            className=" w-3/5 grayscale hover:grayscale-0 transition duration-500 rounded-2xl"
           />
         </div>
         <div className="mt-10 flex flex-col text-justify text-lg">

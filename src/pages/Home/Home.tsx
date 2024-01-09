@@ -9,7 +9,7 @@ import ArrowBottom from "@/components/ArrowBottom";
 function Home() {
   return (
     <>
-      <section id="home" className="lg:pt-20">
+      <section id="home" className="md:pt-20 lg:pt-20">
         <WebHome />
         <MobileHome />
         <ArrowBottom href="/whoami" />
