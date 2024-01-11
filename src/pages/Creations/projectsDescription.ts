@@ -116,7 +116,7 @@ export const projectsDescriptions = [
     id: 3, 
     title: "FoodNinja API",
     mainLanguage: "Javascript",
-    description: `This backend service, crafted using MySQL, NodeJS, and Sequelize, forms the core of a dynamic recipe application. Built primarily in JavaScript, it offers a robust platform for users to engage with a wide array of culinary delights.`,
+    description: `This backend service, crafted using MySQL, NodeJS, and Sequelize, forms the core of a dynamic recipe application. Built primarily in JavaScript, it offers a robust platform for users to engage with a wide array of culinary delights. This project was made with the contributions of Gabriela Franco, Jared Chevalier and Rehman Basharat`,
     tools: ['Javascript','NodeJS','MySQL','Sequelize'],
     images: [
       {

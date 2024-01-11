@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <section
       id="sayhello"
-      className="scroll-mt-10 min-h-screen flex flex-col justify-between lg:min-h-full lg:mt-10"
+      className="scroll-mt-10 min-h-screen flex flex-col justify-between md:min-h-full "
     >
       <Mobile />
       <Web />

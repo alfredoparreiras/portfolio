@@ -10,7 +10,7 @@ const Web = () => {
     <section className="pb-10 hidden lg:block">
       <div className="flex w-full justify-evenly lg:pt-4">
         <div className="w-5/12 text-xl me-24">
-          <MainTitle title="Who I am" />
+          <MainTitle title="Journey" />
           <p className="mb-3">
             Hi, I'm Alfredo, a proud Brazilian currently living in the vibrant
             city of Montreal. I'm happily married to Carol and deeply connected

@@ -14,13 +14,13 @@ function App() {
     <>
       <Header />
       <main className="relative">
-        <section className="hidden md:flex min-h-screen flex-col px-8 py-8 dark:bg-darkBackground dark:text-white">
+        <section className="hidden md:flex justify-center min-h-[85vh] flex-col px-8 dark:bg-darkBackground dark:text-white">
           <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
               <Route index element={<Home />} />
               <Route path="/journey" element={<Journey />} />
               <Route path="/creations" element={<Creations />} />
-              <Route path="/inTouch" element={<Contact />} />
+              <Route path="/sayhello" element={<Contact />} />
               <Route path="/project/:id" element={<Project />} />
             </Routes>
           </AnimatePresence>

@@ -5,7 +5,7 @@ import Web from './Web';
 
 const Journey = () => {
   return (
-    <section id="journey" className="scroll-mt-32 lg:pt-10 ">
+    <section id="journey" className="scroll-mt-32 ">
       <Mobile />
       <Web />
     </section>

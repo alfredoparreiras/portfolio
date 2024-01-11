@@ -4,7 +4,7 @@ import Mobile from "./Mobile"
 
 const Creations = () => {
   return (
-    <section id="creations" className="scroll-mt-28 lg:min-h-[1150px] lg:pt-10">
+    <section id="creations" className="scroll-mt-28">
       <Mobile />
       <Web />
     </section>

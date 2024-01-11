@@ -5,8 +5,8 @@ import ArrowRight from "@/components/ArrowRight";
 const Web = () => {
   return (
     <section className="hidden lg:block">
-      <MainTitle title="What I'm up to" />
-        <div className="my-10 px-4 grid grid-cols-3 gap-8">
+      <MainTitle title="Creations" />
+        <div className="mt-12 px-4 grid grid-cols-3 gap-8">
           
           {projects.map((project, index) => {
             return (
