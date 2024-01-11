@@ -3,14 +3,14 @@ import ArrowRight from "@/components/ArrowRight";
 import MainTitle from "@/components/MainTitle";
 
 
-const MobileProjects = () => {
+const Mobile = () => {
   return (
     <>
       <section
         id="mobileProjects"
         className="dark:text-offwhite lg:hidden"
       >
-        <MainTitle title="What I Did" />
+        <MainTitle title="Creations" />
         <div className="my-10 flex flex-col">
           {projects.map((project, index) => {
             return (
@@ -54,4 +54,4 @@ const MobileProjects = () => {
   );
 }
 
-export default MobileProjects
+export default Mobile

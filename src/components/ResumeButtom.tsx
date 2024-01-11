@@ -1,5 +1,5 @@
 import { IoDocumentOutline } from "react-icons/io5";
-import CV from '@/assets/ALFREDO SILVA  - CV .pdf'
+import CV from '@/assets/ALFREDO SILVA - RESUME.pdf'
 
 const ButtonWrapper = () => {
   return (

@@ -1,12 +1,12 @@
-import HeaderMobile from "./HeaderMobile"
-import HeaderMain from "./HeaderMain"
+import Mobile from "./HeaderMobile"
+import Web from "./HeaderMain"
 
 
 const Header = () => {
   return (
     <header className="sticky top-0 z-50">
-      <HeaderMain/>
-      <HeaderMobile/>
+      <Web/>
+      <Mobile/>
     </header>
   )
 }

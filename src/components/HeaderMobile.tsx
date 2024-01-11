@@ -2,20 +2,20 @@ import { useEffect, useState } from "react";
 import "./teste.css";
 import { AnimatePresence, motion } from "framer-motion";
 import { IoDocumentOutline } from "react-icons/io5";
-import CV from '@/assets/ALFREDO SILVA  - CV .pdf'
+import CV from '@/assets/ALFREDO SILVA - RESUME.pdf'
 
 const routes = [
   {
     title: "Home", href: "/" 
   },
   {
-    title: "Who Am I", href: "#whoami"
+    title: "Journey", href: "#journey"
   },
   {
-    title: "What I Did", href: "#whatidid"
+    title: "Creations", href: "#creations"
   },
   {
-    title: "How to find me", href: "#howtofindme"
+    title: "Say Hello", href: "#sayhello"
   },
 ];
 
@@ -108,7 +108,7 @@ const mobileLinkVars = {
       },
     },
   };
-const HeaderMobile = () => {
+const Mobile = () => {
   const [isOpen, setOpen] = useState(false);
   const [position, setPosition] = useState<boolean>(false); 
 
@@ -132,7 +132,7 @@ const HeaderMobile = () => {
 
   return (
     <header
-      className={`w-full top-0 flex items-center justify-between py-6 px-6 z-50 md:hidden 
+      className={`w-full top-0 flex items-center justify-between py-6 px-8 z-50 md:hidden 
       transition-colors duration-300 dark:text-offwhite
       ${
         position
@@ -228,4 +228,4 @@ const HeaderMobile = () => {
   );
 };
 
-export default HeaderMobile;
+export default Mobile;

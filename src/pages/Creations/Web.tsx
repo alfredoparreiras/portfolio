@@ -2,7 +2,7 @@ import MainTitle from "@/components/MainTitle"
 import { projectsDescriptions as projects } from "./projectsDescription";
 import ArrowRight from "@/components/ArrowRight";
 
-const WebProjects = () => {
+const Web = () => {
   return (
     <section className="hidden lg:block">
       <MainTitle title="What I'm up to" />
@@ -46,4 +46,4 @@ const WebProjects = () => {
   )
 }
 
-export default WebProjects
+export default Web

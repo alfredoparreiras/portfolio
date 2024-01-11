@@ -1,7 +1,7 @@
 import ResumeButtom from "./ResumeButtom";
 
 
-const HeaderMain = () => {
+const Web = () => {
   return (
     <header className="xsm:hidden md:flex justify-between px-8 py-5">
       <a href="/">
@@ -17,4 +17,4 @@ const HeaderMain = () => {
   );
 };
 
-export default HeaderMain;
+export default Web;

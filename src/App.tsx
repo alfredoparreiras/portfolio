@@ -1,10 +1,10 @@
 import {Routes,Route,useLocation} from "react-router-dom"
-import AboutMe from "./pages/AboutMe/AboutMe";
+import Journey from "./pages/Journey/Journey";
 import Home from "./pages/Home/Home";
-import Projects from "./pages/Projects/Projects";
-import Contact from "./pages/Contact/Contact";
+import Creations from "./pages/Creations/Creations";
+import Contact from "./pages/SayHello/SayHello";
 import { AnimatePresence } from "framer-motion";
-import Project from "./pages/Projects/Project";
+import Project from "./pages/Creations/Project";
 import Header from "./components/Header";
 
 function App() {
@@ -12,25 +12,24 @@ function App() {
 
   return (
     <>
+      <Header />
       <main className="relative">
         <section className="hidden md:flex min-h-screen flex-col px-8 py-8 dark:bg-darkBackground dark:text-white">
-          <Header />
           <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
               <Route index element={<Home />} />
-              <Route path="/whoami" element={<AboutMe />} />
-              <Route path="/whatidid" element={<Projects />} />
-              <Route path="/howtofindme" element={<Contact />} />
+              <Route path="/journey" element={<Journey />} />
+              <Route path="/creations" element={<Creations />} />
+              <Route path="/inTouch" element={<Contact />} />
               <Route path="/project/:id" element={<Project />} />
             </Routes>
           </AnimatePresence>
         </section>
-        <section className="min-h-screen lg:hidden">
-          <Header />
+        <section className="min-h-screen md:hidden lg:hidden">
           <section className="px-8 py-8">
             <Home />
-            <AboutMe />
-            <Projects />
+            <Journey />
+            <Creations />
             <Contact />
           </section>
         </section>

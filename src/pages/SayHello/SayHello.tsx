@@ -1,18 +1,18 @@
 import transition from '@/Transition'
-import MobileContact from './MobileContact'
-import WebContact from './WebContact'
+import Mobile from './Mobile'
+import Web from './Web'
 import ArrowUp from '@/components/ArrowUp'
 import Social from '@/components/Social'
 
 const Contact = () => {
   return (
     <section
-      id="howtofindme"
-      className="scroll-mt-8 flex flex-col h-[90vh] justify-between lg:min-h-full lg:mt-10"
+      id="sayhello"
+      className="scroll-mt-10 min-h-screen flex flex-col justify-between lg:min-h-full lg:mt-10"
     >
-      <MobileContact />
-      <WebContact />
-      <section className="relative flex justify-center lg:mt-20 ">
+      <Mobile />
+      <Web />
+      <section className="relative flex justify-center mt-10 lg:mt-20 ">
         <div className="flex">
           <Social
             link="https://github.com/alfredopsilva"

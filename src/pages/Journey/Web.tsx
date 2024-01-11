@@ -1,22 +1,16 @@
-import Icons from "@/components/Icons";
-import Me from "../../assets/IMG_1841.jpeg"
+import MainTitle from "@/components/MainTitle"
+import Me2 from "../../assets/IMG_1841.jpeg"
 import { skills } from './skills';
-import MainTitle from '@/components/MainTitle';
+import Icons from "@/components/Icons";
 
 
-const MobileAboutMe = () => {
+
+const Web = () => {
   return (
-    <section className="relative -top-5 dark:text-offwhite lg:hidden">
-      <MainTitle changeStyle={"w-full"} title="Who Am I" />
-      <div className="flex flex-col items-center">
-        <div className="mt-10 w-screen flex justify-center">
-          <img
-            src={Me}
-            alt=""
-            className=" w-3/5 grayscale hover:grayscale-0 transition duration-500 rounded-2xl"
-          />
-        </div>
-        <div className="mt-10 flex flex-col text-justify text-lg">
+    <section className="pb-10 hidden lg:block">
+      <div className="flex w-full justify-evenly lg:pt-4">
+        <div className="w-5/12 text-xl me-24">
+          <MainTitle title="Who I am" />
           <p className="mb-3">
             Hi, I'm Alfredo, a proud Brazilian currently living in the vibrant
             city of Montreal. I'm happily married to Carol and deeply connected
@@ -36,17 +30,26 @@ const MobileAboutMe = () => {
             A quirky fact about me? I have a growing collection of tattoos.
           </p>
           <p className="mb-3 text-left">Welcome!</p>
-          <div className="my-10 grid grid-cols-3 gap-8">
+          <div className=" grid lg:grid-cols-6 lg:gap-12 lg:mt-16 ">
             {skills.map((item, index) => {
               return (
                 <div key={index} className="">
                   <div className="flex flex-col items-center">
                     <Icons skill={item} />
-                    <p>{item.name}</p>
+                    <p className="text-base">{item.name}</p>
                   </div>
                 </div>
               );
             })}
+          </div>
+        </div>
+        <div>
+          <div className="">
+            <img
+              src={Me2}
+              alt="Alfredo's Photo"
+              className="max-w-md grayscale hover:grayscale-0 transition duration-500 rounded-2xl"
+            />
           </div>
         </div>
       </div>
@@ -54,4 +57,4 @@ const MobileAboutMe = () => {
   );
 }
 
-export default MobileAboutMe
+export default Web

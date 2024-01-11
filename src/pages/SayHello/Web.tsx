@@ -1,7 +1,7 @@
 
 import Form from "@/components/Form"
 
-const WebContact = () => {
+const Web = () => {
   return (
     <section className="hidden lg:block">
       <div className="flex justify-center items-center mt-18 mb-10">
@@ -11,4 +11,4 @@ const WebContact = () => {
   )
 }
 
-export default WebContact
+export default Web
