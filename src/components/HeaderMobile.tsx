@@ -1,7 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./teste.css";
-import { Link } from "react-router-dom";
-import MobileNavLink from "./MobileNavLink";
 import { AnimatePresence, motion } from "framer-motion";
 import { IoDocumentOutline } from "react-icons/io5";
 import CV from '@/assets/ALFREDO SILVA  - CV .pdf'
@@ -11,26 +9,32 @@ const routes = [
     title: "Home", href: "/" 
   },
   {
-    title: "Who Am I", href: "/whoami"
+    title: "Who Am I", href: "#whoami"
   },
   {
-    title: "What I Did", href: "/whatidid"
+    title: "What I Did", href: "#whatidid"
   },
   {
-    title: "How to find me", href: "/howtofindme"
+    title: "How to find me", href: "#howtofindme"
   },
 ];
 
-const HeaderMobile = () => {
-  const [isOpen, setOpen] = useState(false);
-  const [position, setPosition] = useState(window.scrollY); 
-
-  window.addEventListener('scroll', ()=> {
-    setPosition(window.scrollY);
-  })
-  const toggleMenu = () => {
-    setOpen(!isOpen)
-  }
+const mobileLinkVars = {
+  initial: {
+    y: "30vh",
+    transition: {
+      duration: 0.5,
+      ease: [0.37, 0, 0.63, 1],
+    },
+  },
+  open: {
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: [0, 0.55, 0.45, 1],
+    },
+  },
+};
 
   const menuVars = {
     initial: {
@@ -104,18 +108,42 @@ const HeaderMobile = () => {
       },
     },
   };
+const HeaderMobile = () => {
+  const [isOpen, setOpen] = useState(false);
+  const [position, setPosition] = useState<boolean>(false); 
+
+    const toggleMenu = () => {
+      setOpen(!isOpen);
+    };
+
+  const handleScroll = () => {
+    const position: number = window.scrollY; 
+    setPosition(position >= 33);
+  }
+
+  useEffect(() => { 
+  
+    window.addEventListener('scroll', handleScroll, {passive: true});
+
+    return () => {
+      window.removeEventListener('scroll',handleScroll)
+    } 
+  })
+
   return (
     <header
-      className={
-        position >= 20
-          ? "w-full sticky top-0 flex items-center bg-accentColor text-offwhite dark:bg-darkAccentColor dark:text-accentColor justify-between px-8 py-5 z-50 md:hidden"
-          : `w-full sticky top-0 flex items-center justify-between z-50 px-8 py-5 md:hidden`
-      }
+      className={`w-full top-0 flex items-center justify-between py-6 px-6 z-50 md:hidden 
+      transition-colors duration-300 dark:text-offwhite
+      ${
+        position
+          ? "bg-accentColor text-offwhite dark:bg-darkAccentColor dark:text-accentColor"
+          : ""
+      }`}
     >
-      <Link to={"/"}>
+      <a href="/">
         {" "}
         <p className="font-JetBrains text-lg font-semibold">{"{ AScode }"}</p>
-      </Link>
+      </a>
       <nav>
         <p onClick={toggleMenu} className="">
           Menu
@@ -132,12 +160,12 @@ const HeaderMobile = () => {
           >
             <div className="flex flex-col">
               <div className="flex justify-between">
-                <Link to={"/"}>
+                <a href='/'>
                   {" "}
                   <p className="font-JetBrains text-base font-semibold">
                     {"{ AScode }"}
                   </p>
-                </Link>
+                </a>
                 <p
                   className="cursor-pointer text-md text-offwhite dark:bg-darkAccentColor dark:text-accentColor"
                   onClick={toggleMenu}
@@ -156,11 +184,11 @@ const HeaderMobile = () => {
               {routes.map((link, index) => {
                 return (
                   <div className="overflow-hidden mt-2 smallDevice" key={index}>
-                    <MobileNavLink
-                      title={link.title}
-                      href={link.href}
-                      onClick={toggleMenu}
-                    />
+                    <motion.div variants={mobileLinkVars}>
+                      <a href={`${link.href}`} onClick={toggleMenu}>
+                        {link.title}
+                      </a>
+                    </motion.div>
                   </div>
                 );
               })}

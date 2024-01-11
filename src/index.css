@@ -15,9 +15,9 @@ html, body, #root, .app{
   font-family: "DM Sans", sans-serif;
 }
 
-/* #root {
-  padding:2rem 2rem 0 2rem;
-} */
+main { 
+  
+}
 
 .slide-in{
   position: fixed;

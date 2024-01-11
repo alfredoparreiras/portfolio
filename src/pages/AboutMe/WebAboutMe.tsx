@@ -1,5 +1,5 @@
 import MainTitle from "@/components/MainTitle"
-import Me from "../../assets/me.jpeg"
+import Me2 from "../../assets/IMG_1841.jpeg"
 import { skills } from './skills';
 import Icons from "@/components/Icons";
 
@@ -8,9 +8,9 @@ import Icons from "@/components/Icons";
 const WebAboutMe = () => {
   return (
     <section className="pb-10 hidden lg:block">
-      <MainTitle title="Who Am I" />
-      <div className="flex w-full justify-between lg:pt-4">
-        <div className="w-5/12 text-xl">
+      <div className="flex w-full justify-evenly lg:pt-4">
+        <div className="w-5/12 text-xl me-24">
+          <MainTitle title="Who I am" />
           <p className="mb-3">
             Hi, I'm Alfredo, a proud Brazilian currently living in the vibrant
             city of Montreal. I'm happily married to Carol and deeply connected
@@ -46,7 +46,7 @@ const WebAboutMe = () => {
         <div>
           <div className="">
             <img
-              src={Me}
+              src={Me2}
               alt="Alfredo's Photo"
               className="max-w-md grayscale hover:grayscale-0 transition duration-500 rounded-2xl"
             />

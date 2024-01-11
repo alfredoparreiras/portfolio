@@ -19,8 +19,6 @@ function ArrowUp({href}: ArrowBottomProps) {
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, [])
 
-  
-  
   const fade = useSpring({
     from: { opacity: 0 },
     opacity: 1,
@@ -33,7 +31,7 @@ function ArrowUp({href}: ArrowBottomProps) {
   });
 
   return (
-    <animated.div className="absolute bottom-12 right-8" style={fade}>
+    <animated.div className="absolute bottom-2 right-2" style={fade}>
       <a href={href}>
         <motion.img
           src={darkMode ? UpArrowDark : UpArrow}

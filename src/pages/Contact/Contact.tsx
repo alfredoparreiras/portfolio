@@ -6,12 +6,14 @@ import Social from '@/components/Social'
 
 const Contact = () => {
   return (
-    <section id="howtofindme" className="min-h-[760px] lg:min-h-full lg:mt-10">
+    <section
+      id="howtofindme"
+      className="scroll-mt-8 flex flex-col h-[90vh] justify-between lg:min-h-full lg:mt-10"
+    >
       <MobileContact />
       <WebContact />
-      <section className="socialIcons flex justify-start lg:mt-20 ">
-        <ArrowUp href={"/"} />
-        <div className="flex absolute bottom-10">
+      <section className="relative flex justify-center lg:mt-20 ">
+        <div className="flex">
           <Social
             link="https://github.com/alfredopsilva"
             isGitHub={true}
@@ -22,6 +24,7 @@ const Contact = () => {
             isGitHub={false}
             className="h-14 w-14 fill-accentColor dark:fill-darkAccentColor"
           />
+          <ArrowUp href={"/"} />
         </div>
       </section>
     </section>

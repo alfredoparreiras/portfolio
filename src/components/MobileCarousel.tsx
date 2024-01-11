@@ -6,7 +6,7 @@ type MobileCarouselProps = {
 
 export default function MobileCarousel({images}: MobileCarouselProps) {
   return (
-    <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+    <div className=" h-48 sm:h-64 xl:h-80 2xl:h-96">
       <Carousel>
         {images.map((images, index) => {
           return (

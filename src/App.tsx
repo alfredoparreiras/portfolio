@@ -12,17 +12,28 @@ function App() {
 
   return (
     <>
-      <Header/>
-      <main className="relative min-h-full md:min-h-full px-8 dark:bg-darkBackground dark:text-white">
-        <AnimatePresence mode="wait">
-          <Routes location={location} key={location.pathname}>
-            <Route index element={<Home />} />
-            <Route path="/whoami" element={<AboutMe />} />
-            <Route path="/whatidid" element={<Projects />} />
-            <Route path="/howtofindme" element={<Contact />} />
-            <Route path="/project/:id" element={<Project />} />
-          </Routes>
-        </AnimatePresence>
+      <main className="relative">
+        <section className="hidden md:flex min-h-screen flex-col px-8 py-8 dark:bg-darkBackground dark:text-white">
+          <Header />
+          <AnimatePresence mode="wait">
+            <Routes location={location} key={location.pathname}>
+              <Route index element={<Home />} />
+              <Route path="/whoami" element={<AboutMe />} />
+              <Route path="/whatidid" element={<Projects />} />
+              <Route path="/howtofindme" element={<Contact />} />
+              <Route path="/project/:id" element={<Project />} />
+            </Routes>
+          </AnimatePresence>
+        </section>
+        <section className="min-h-screen lg:hidden">
+          <Header />
+          <section className="px-8 py-8">
+            <Home />
+            <AboutMe />
+            <Projects />
+            <Contact />
+          </section>
+        </section>
       </main>
     </>
   );

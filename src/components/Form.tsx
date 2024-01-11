@@ -2,7 +2,7 @@
 const Form = () => {
   return (
     <div className="justify-star flex items-center mt-10">
-      <div className="mx-auto lg:mx-0 w-full max-w-lg">
+      <div className="mx-auto lg:mx-0 w-full max-w-lg dark:text-offwhite">
         <p className="mt-3">
           Email me at <a href="mailto:a.alfredops@gmail.com" ><span className=" text-accentColor dark:text-darkAccentColor">a.alfredops@gmail.com</span></a>{" "}
           or message me here:

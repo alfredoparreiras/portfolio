@@ -5,7 +5,7 @@ import ArrowRight from "@/components/ArrowRight";
 const WebProjects = () => {
   return (
     <section className="hidden lg:block">
-      <MainTitle title="What I Did" />
+      <MainTitle title="What I'm up to" />
         <div className="my-10 px-4 grid grid-cols-3 gap-8">
           
           {projects.map((project, index) => {
@@ -22,7 +22,6 @@ const WebProjects = () => {
                       className="block w-full h-auto transition-opacity rounded-xl"
                       alt=""
                     />
-                    <div className="overlay absolute inset-0 bg-accentColor/50 dark:bg-darkAccentColor/50 transition-opacity group-hover:opacity-0 duration-700 rounded-xl"></div>
                   </div>
                   <div className="px-1">
                     <div className="mt-5 grid grid-cols-3 gap-3">
@@ -42,8 +41,6 @@ const WebProjects = () => {
               </div>
             );
           })}
-
-
         </div>
     </section>
   )

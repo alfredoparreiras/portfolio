@@ -1,5 +1,4 @@
 import { projectsDescriptions as projects } from "./projectsDescription";
-import MobileCarousel from "@/components/MobileCarousel";
 import ArrowRight from "@/components/ArrowRight";
 import MainTitle from "@/components/MainTitle";
 
@@ -9,15 +8,15 @@ const MobileProjects = () => {
     <>
       <section
         id="mobileProjects"
-        className="h-min-screen lg:hidden"
+        className="dark:text-offwhite lg:hidden"
       >
         <MainTitle title="What I Did" />
         <div className="my-10 flex flex-col">
           {projects.map((project, index) => {
             return (
-              <div key={index} className="mb-14" id={`mobileProjects${index}`}>
-                <div className="flex items-center mb-3">
-                  <h1 className="text-xl me-1"> {project.title}</h1>
+              <div key={index} className="pb-10" id={`mobileProjects${index}`}>
+                <div className="flex mb-4 items-center">
+                  <h1 className="text-xl  me-1"> {project.title}</h1>
                   {project.live ? (
                     <a href={project.live} target="_blank">
                       <ArrowRight />
@@ -28,7 +27,7 @@ const MobileProjects = () => {
                     </div>
                   )}
                 </div>
-                <MobileCarousel images={project.mobileImages} />
+                <img src={project.mobileImages[0]} alt={`HomePage Image from ${project.title}'s project`} />
                 <p className="mt-4 text-sm">{project.description}</p>
                 <div className="mt-6">
                   <div className="mt-5 grid grid-cols-3 gap-3">
