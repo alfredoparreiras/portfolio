@@ -1,5 +1,4 @@
 import ShuffleHero from '@/components/Hero'
-import React from 'react'
 import { projectsDescriptions as projects } from './projectsDescription'
 
 const firstImages = projects.map((project) => {

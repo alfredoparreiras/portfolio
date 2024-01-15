@@ -48,7 +48,7 @@ const WebHome = () => {
                   md:flex            
                   lg:text-[3.5rem] lg:leading-[4rem] lg:w-3/5 
                   xlg:leading-[6rem] xlg:text-[5.5rem] 
-                  xxlg:leading-[8rem] xxlg:text-[7.5rem] 
+                  xxlg:leading-[7.5rem] xxlg:text-[7.5rem] 
                   xxxlg:leading-[12rem] xxxlg:text-[11rem]
                   tabletRotated"
     >

@@ -25,7 +25,7 @@ const Icons = ({skill}: IconsProp) => {
           <img
             src={darkMode ? skill.DarkImgUrl : skill.imgUrl}
             alt={`${skill.name}' icons'`}
-            className="max-w-icon"
+            className="max-w-icon xlg:max-w-xIcon xxlg:max-w-xxIcon xxxlg:max-w-xxxIcon"
           />
   )
 }

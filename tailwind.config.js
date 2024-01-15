@@ -31,12 +31,18 @@ export default {
       },
       screens: {
         xsm: "100px",
-        sm: "400px",
+        sm: "300px",
         md: "760px",
         lg: "1080px",
+        xlg: "1920px",
+        xxlg: "2560px",
+        xxxlg: "3840px"
       },
       maxWidth: {
         icon: "32px",
+        xIcon: "48px", 
+        xxIcon: "72px",
+        xxxIcon: "112px"
       },
       fontSize: {
         "4.5xl": "2.750rem",
@@ -46,6 +52,9 @@ export default {
         sectionVh: "91.5vh",
         mobileHeaderVh: "7.5vh",
       },
+      minHeight: {
+        '90': '90vh',
+      }
     },
   },
   plugins: [],
