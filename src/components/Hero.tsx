@@ -1,14 +1,8 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-type Project = {
-    src: string,
-    title?: string,
-    id: number,
-}
-
 type ShuffleHeroProps = {
-  squareData: Project[]
+  squareData: string[]
 }
 
 const ShuffleHero = ({ squareData }: ShuffleHeroProps) => {
@@ -19,7 +13,7 @@ const ShuffleHero = ({ squareData }: ShuffleHeroProps) => {
   );
 };
 
-const shuffle = (array : Project[]) => {
+const shuffle = (array : string[]) => {
   let currentIndex = array.length,
     randomIndex;
 
@@ -36,15 +30,15 @@ const shuffle = (array : Project[]) => {
   return array;
 };
 
-const generateSquares = (data: Project[]) => {
-  return shuffle(data).map((sq) => (
+const generateSquares = (data: string[]) => {
+  return shuffle(data).map((sq,index) => (
     <motion.div
-      key={sq.id}
+      key={index}
       layout
       transition={{ duration: 1.5, type: "spring" }}
       className="w-full h-full"
       style={{
-        backgroundImage: `url(${sq.src})`,
+        backgroundImage: `url(${sq})`,
         backgroundSize: "cover",
       }}
     ></motion.div>
@@ -52,7 +46,7 @@ const generateSquares = (data: Project[]) => {
 };
 
 type ShuffleGridProps = {
-  squareData: Project[];
+  squareData: string[];
 };
 
 const ShuffleGrid = ({ squareData }: ShuffleGridProps) => {

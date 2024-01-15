@@ -8,7 +8,7 @@ import transition from "@/Transition";
 function Home() {
   return (
     <>
-      <section id="home" className="">
+      <section id="home" className="flex items-center">
         <WebHome />
         <MobileHome />
       </section>

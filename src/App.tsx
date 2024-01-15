@@ -4,7 +4,6 @@ import Home from "./pages/Home/Home";
 import Creations from "./pages/Creations/Creations";
 import Contact from "./pages/SayHello/SayHello";
 import { AnimatePresence } from "framer-motion";
-import Project from "./pages/Creations/Project";
 import Header from "./components/Header";
 
 function App() {
@@ -14,14 +13,13 @@ function App() {
     <>
       <Header />
       <main className="relative">
-        <section className="hidden md:flex justify-center min-h-[85vh] flex-col px-8 dark:bg-darkBackground dark:text-white">
+        <section className="hidden md:flex justify-center min-h-[80vh] flex-col px-8 xlg:px-16 xxlg:px-32 xxxlg:px-40 dark:bg-darkBackground dark:text-white">
           <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
               <Route index element={<Home />} />
               <Route path="/journey" element={<Journey />} />
               <Route path="/creations" element={<Creations />} />
               <Route path="/sayhello" element={<Contact />} />
-              <Route path="/project/:id" element={<Project />} />
             </Routes>
           </AnimatePresence>
         </section>

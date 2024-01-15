@@ -11,7 +11,7 @@ const Web = () => {
       <div className="flex w-full justify-evenly lg:pt-4">
         <div className="w-5/12 text-xl me-24">
           <MainTitle title="Journey" />
-          <p className="mb-3">
+          <p className="mb-3 mt-8">
             Hi, I'm Alfredo, a proud Brazilian currently living in the vibrant
             city of Montreal. I'm happily married to Carol and deeply connected
             with my Christian faith.

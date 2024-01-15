@@ -39,47 +39,56 @@ const WebHome = () => {
     };
 
   return (
-      <motion.div
-        variants={containerVariants}
-        initial="initial"
-        animate="open"
-        className="md:flex px-12 flex-col justify-center leading-[5rem] text-left text-7xl lg:text-6xl lg:leading-[3.5rem] lg:w-3/5 xsm:hidden tabletRotated"
-      >
-        <div className="overflow-hidden">
-          <motion.p variants={introductionVariants}>Hi, there!</motion.p></div>
-        <div className="overflow-hidden">
-          <motion.p variants={introductionVariants} className="mt-5">
-            {" "}
-            I'm Alfredo, a{" "}
-            <span className="text-accentColor dark:text-darkAccentColor">
-              Software Developer
-            </span>
-          </motion.p>
-        </div>
-        <div className="overflow-hidden">
-          <motion.p variants={introductionVariants} className="mt-5">
-            {" "}
-            Dedicated about{" "}
-            <span className="text-accentColor dark:text-darkAccentColor">
-              solving problems
-            </span>{" "}
-            via
-            {" "}
-            <span className="text-accentColor dark:text-darkAccentColor">
-              code
-            </span>
-          </motion.p>
-        </div>
-        <div className="overflow-hidden">
-          <motion.p variants={introductionVariants} className="mt-5">
-            {" "}
-            I'm currently based in{" "}
-            <span className="text-accentColor dark:text-darkAccentColor">
-              Montreal
-            </span>
-          </motion.p>
-        </div>
-      </motion.div>
+    <motion.div
+      variants={containerVariants}
+      initial="initial"
+      animate="open"
+      className="px-12 flex-col justify-center leading-[5rem] text-left text-7xl
+                  xsm:hidden            
+                  md:flex            
+                  lg:text-[3.5rem] lg:leading-[4rem] lg:w-3/5 
+                  xlg:leading-[6rem] xlg:text-[5.5rem] 
+                  xxlg:leading-[8rem] xxlg:text-[7.5rem] 
+                  xxxlg:leading-[12rem] xxxlg:text-[11rem]
+                  tabletRotated"
+    >
+      <div className="overflow-hidden">
+        <motion.p variants={introductionVariants}>Hi, there!</motion.p>
+      </div>
+      <div className="overflow-hidden">
+        <motion.p variants={introductionVariants} className="mt-5">
+          {" "}
+          I'm Alfredo, a{" "}
+          <span className="text-accentColor dark:text-darkAccentColor">
+            Software Developer
+          </span>
+        </motion.p>
+      </div>
+      <div className="overflow-hidden">
+        <motion.p variants={introductionVariants} className="mt-5">
+          {" "}
+          Dedicated about{" "}
+          <span className="text-accentColor dark:text-darkAccentColor">
+            solving problems
+          </span>{" "}
+          <span className="leading-[4.3rem] xlg:leading-[6.3rem] xxlg:leading-[9rem] xxxlg:leading-[13rem]">
+            through{" "}
+          </span>
+          <span className="text-accentColor dark:text-darkAccentColor">
+            code
+          </span>
+        </motion.p>
+      </div>
+      <div className="overflow-hidden">
+        <motion.p variants={introductionVariants} className="mt-5">
+          {" "}
+          I'm currently based in{" "}
+          <span className="text-accentColor dark:text-darkAccentColor">
+            Montreal
+          </span>
+        </motion.p>
+      </div>
+    </motion.div>
   );
 };
 

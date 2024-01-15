@@ -12,11 +12,7 @@
 html, body, #root, .app{ 
   margin: 0 auto;
   background-color:#F4F4F5;
-  font-family: "DM Sans", sans-serif;
-}
-
-main { 
-  
+  font-family: "DM Sans", sans-serif; 
 }
 
 .slide-in{
@@ -37,50 +33,24 @@ main {
   background-color: #305176;
   transform-origin: bottom;
 }
-/* 
+
 @media screen and (min-width: 1280px) {
-  html, 
-  body, 
-  #root, 
-  .app{ 
-    zoom: 0.95;
-  }
-} */
+
+}
 
 @media screen and (min-width: 1920px) {
-  html, 
-  body, 
-  #root, 
-  .app{ 
-    zoom: 1.125;
 
-  }
 }
 @media screen and (min-width: 2560px) {
-    html, 
-    body, 
-    #root, 
-    .app{ 
-      zoom: 1.225
-    }
+    
 }
 @media screen and (min-width: 3840px) {
-  html, 
-  body, 
-  #root, 
-  .app{ 
-    zoom: 1.4
-  }
+
 }
 
 @media screen and (min-width: 5120px) {
-  html, 
-  body, 
-  #root,
-  .app{ 
-    zoom: 1.8;
-  }
-}
+
+} 
 
 @media screen and (max-width:430px) and (min-height: 800px){
   .tallDevice{
