@@ -46,7 +46,7 @@ const WebHome = () => {
       className="px-12 flex-col justify-center leading-[5rem] text-left text-7xl
                   xsm:hidden            
                   md:flex            
-                  lg:text-[4.5rem] lg:leading-[4rem] lg:w-3/5 
+                  lg:text-[3.75rem] lg:leading-[3.5rem] lg:w-3/5 
                   xlg:leading-[6rem] xlg:text-[5rem] 
                   tabletRotated"
     >
