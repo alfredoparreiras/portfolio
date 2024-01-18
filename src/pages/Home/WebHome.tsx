@@ -46,10 +46,8 @@ const WebHome = () => {
       className="px-12 flex-col justify-center leading-[5rem] text-left text-7xl
                   xsm:hidden            
                   md:flex            
-                  lg:text-[3.5rem] lg:leading-[4rem] lg:w-3/5 
-                  xlg:leading-[6rem] xlg:text-[5.5rem] 
-                  xxlg:leading-[7.5rem] xxlg:text-[7.5rem] 
-                  xxxlg:leading-[12rem] xxxlg:text-[11rem]
+                  lg:text-[4.5rem] lg:leading-[4rem] lg:w-3/5 
+                  xlg:leading-[6rem] xlg:text-[5rem] 
                   tabletRotated"
     >
       <div className="overflow-hidden">
@@ -71,7 +69,7 @@ const WebHome = () => {
           <span className="text-accentColor dark:text-darkAccentColor">
             solving problems
           </span>{" "}
-          <span className="leading-[4.3rem] xlg:leading-[6.3rem] xxlg:leading-[9rem] xxxlg:leading-[13rem]">
+          <span className="leading-[5rem] xlg:leading-[6.3rem]">
             through{" "}
           </span>
           <span className="text-accentColor dark:text-darkAccentColor">

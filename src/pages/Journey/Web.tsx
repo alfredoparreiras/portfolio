@@ -8,13 +8,11 @@ import Icons from "@/components/Icons";
 const Web = () => {
   return (
     <section className="hidden lg:block">
-      <div className="flex w-full justify-around lg:pt-4">
-        <div className=" w-[45%]">
+      <div className="flex w-full justify-evenly lg:pt-4">
+        <div className=" w-[45%] xlg:w-[30%]">
           <MainTitle title="Journey" changeStyle="xlg:text-7xl" />
-          <div className="text-[1.150rem] leading-8 
-                            xlg:text-[1.4rem] xlg:leading-10
-                            xxlg:text-[2rem] xxlg:leading-[4rem]
-                            xxxlg:text-[3rem] xxxlg:leading-[5rem]">
+          <div className="text-[1.150rem] leading-9 
+                            xlg:text-[1.5rem]">
             <p className="mb-3 mt-5">
               Hi, I'm Alfredo, a proud Brazilian currently living in the vibrant
               city of Montreal. I'm happily married to Carol and deeply connected
@@ -36,7 +34,7 @@ const Web = () => {
             <p className="mb-3 text-left">Welcome!</p>
           </div>
           <div className="grid lg:grid-cols-6 lg:gap-6 lg:mt-8 
-                            xlg:mt-12
+                            xlg:mt-24
                             xxlg:gap-12
                             xxxlg:gap-20">
             {skills.map((item, index) => {
@@ -58,8 +56,7 @@ const Web = () => {
               alt="Alfredo's Photo"
               className="max-w-[470px] rounded-xl 
                           xlg:max-w-[570px]
-                          xxlg:max-w-[770px]
-                          xxxlg:max-w-[970px]"
+                          xxlg:max-w-[620px]"
             />
           </div>
         </div>

@@ -19,7 +19,7 @@ function ArrowRight() {
       <img
         src={darkMode ? RightArrowDark : RightArrow}
         alt=""
-        className="w-4 ms-1"
+        className="w-4 ms-1 xlg:w-8 xlg:ms-2"
       />
   );
 }

@@ -17,12 +17,12 @@ const Contact = () => {
           <Social
             link="https://github.com/alfredopsilva"
             isGitHub={true}
-            className="h-14 w-14 fill-accentColor dark:fill-darkAccentColor"
+            className="h-14 w-14 xlg:h-24 xlg:w-24 fill-accentColor dark:fill-darkAccentColor"
           />
           <Social
             link="https://www.linkedin.com/in/alfredopsilva/"
             isGitHub={false}
-            className="h-14 w-14 fill-accentColor dark:fill-darkAccentColor"
+            className="h-14 w-14 xlg:h-24 xlg:w-24 fill-accentColor dark:fill-darkAccentColor"
           />
           <ArrowUp href={"/"} />
         </div>

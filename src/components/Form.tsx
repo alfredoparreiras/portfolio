@@ -10,7 +10,7 @@ const Form = () => {
 
         <form action="" className="mt-10">
           <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
-          <div className="grid gap-6 sm:grid-cols-2">
+          <div className="grid gap-6 sm:grid-cols-2 ">
             <div className="relative z-0 col-span-2">
               <input
                 type="text"
@@ -45,12 +45,13 @@ const Form = () => {
               </label>
             </div>
           </div>
-          
+
           <div className="flex justify-center">
-            <button
-              type="submit"
-              className="mt-10 before:ease relative h-12 w-full lg:w-1/2 overflow-hidden border border-accentColor/90 bg-accentColor/90 text-white shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-accentColor/50 hover:before:-translate-x-80 lg:hover:before:-translate-x-140 dark:border-darkAccentColor/90 dark:bg-darkAccentColor/90"
-            >
+            <button className="mt-8 rounded-2xl border-2 border-solid border-accentColor dark:border-darkAccentColor
+                        px-4 py-2 font-semibold uppercase text-accentColor  dark:text-darkAccentColor                       
+                        transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px]
+                        hover:rounded-md hover:shadow-[4px_4px_0px_#24527A] dark:hover:shadow-[4px_4px_0px_#82e2c6] active:translate-x-[0px] 
+                        active:translate-y-[0px] active:rounded-2xl active:shadow-none">
               Send Message
             </button>
           </div>

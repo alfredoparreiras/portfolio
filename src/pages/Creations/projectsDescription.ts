@@ -37,7 +37,7 @@ export const projectsDescriptions = [
     id: 1, 
     title: "TaskTrace",
     mainLanguage: "Java - JavaEE",
-    description: `TaskTrace is a task management tool that simplifies tracking tasks for both individuals. It provides an easy overview of each task's progress from start to end, improving efficiency.`,
+    description: `TaskTrace is an intuitive task management application designed to streamline task tracking for individuals. It offers a clear and user-friendly interface, allowing users to easily monitor the progress of their tasks from initiation to completion. This tool enhances productivity by providing a comprehensive view of task statuses, thereby facilitating efficient management and timely completion of tasks.`,
     tools: ['JavaEE', 'Docker','TomCat', 'Bootstrap', 'MySQL', 'VPS'],
     images: [
       {
@@ -74,7 +74,7 @@ export const projectsDescriptions = [
     id: 2, 
     title: "FoodNinja API Documentation",
     mainLanguage: "Typescript",
-    description: `The website provides documentation for the FoodNinja API, a comprehensive resource for developers looking to integrate or utilize FoodNinja's services in their applications`,
+    description: `The website offers detailed documentation for the FoodNinja API, serving as a vital tool for developers who aim to integrate FoodNinja's services into their own applications. This resource provides thorough guidance, covering various aspects of the API, to ensure seamless implementation and effective utilization of FoodNinja's functionalities in diverse application environments.`,
     tools: ['Typescript', 'React', 'Vercel', 'Tawilwind'],
     images: [
       {
@@ -116,7 +116,7 @@ export const projectsDescriptions = [
     id: 3, 
     title: "FoodNinja API",
     mainLanguage: "Javascript",
-    description: `This backend service, crafted using MySQL, NodeJS, and Sequelize, forms the core of a dynamic recipe application. Built primarily in JavaScript, it offers a robust platform for users to engage with a wide array of culinary delights. This project was made with the contributions of Gabriela Franco, Jared Chevalier and Rehman Basharat`,
+    description: `This backend service, developed with MySQL, NodeJS, and Sequelize, is the cornerstone of an innovative recipe application. It's intricately built in JavaScript, providing a strong and interactive platform for users to explore and enjoy a diverse range of recipes. This dynamic project is a collaborative effort, featuring significant contributions from Gabriela Franco, Jared Chevalier, and Rehman Basharat, enhancing its functionality and user experience.`,
     tools: ['Javascript','NodeJS','MySQL','Sequelize'],
     images: [
       {
@@ -159,7 +159,7 @@ export const projectsDescriptions = [
     id: 4, 
     title: "Moshify",
     mainLanguage: "Javascript - HTML - CSS",
-    description: `Webtemplate for a company who sells clouding plans. `,
+    description: "The Moshify project involves creating a sleek and engaging landing page for a cloud service provider. Utilizing HTML, CSS, and JavaScript, the page showcases Moshify's cloud services with a focus on attracting and retaining customers. The design is user-friendly, featuring interactive elements and a responsive layout that adapts to various devices, ensuring a seamless user experience. This project effectively blends aesthetics with functionality to highlight Moshify's offerings and encourage customer engagement.",
     tools: ['HTML5', 'CSS3', 'Javascript'],
     images: [
       {

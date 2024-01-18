@@ -2,9 +2,6 @@ import WebHome from "./WebHome";
 import MobileHome from "./MobileHome";
 import transition from "@/Transition";
 
-
-
-
 function Home() {
   return (
     <>
