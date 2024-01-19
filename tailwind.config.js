@@ -9,6 +9,7 @@ export default {
     "./src/**/*.{ts,tsx}",
     "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     container: {
       center: true,
@@ -40,7 +41,7 @@ export default {
       },
       maxWidth: {
         icon: "32px",
-        xIcon: "48px", 
+        xIcon: "48px",
         xxIcon: "72px",
         xxxIcon: "112px"
       },

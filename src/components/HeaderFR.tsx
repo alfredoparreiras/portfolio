@@ -1,5 +1,5 @@
-import Mobile from "./HeaderMobile"
-import Web from "./HeaderMain"
+import WebFR from "./HeaderMainFR";
+import MobileFR from "./HeaderMobileFR";
 
 type HeaderProps = {
   language: string;
@@ -8,12 +8,11 @@ type HeaderProps = {
   setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-
 const Header = ({language, setLanguage, darkMode, setDarkMode}: HeaderProps) => {
   return (
-    <header className="xsm:sticky xsm:top-0 md:static z-50 bg-offwhite dark:bg-darkBackground dark:text-offwhite">
-      <Web language={language} setLanguage={setLanguage} darkMode={darkMode} setDarkMode={setDarkMode} />
-      <Mobile />
+    <header className="xsm:sticky xsm:top-0 md:static z-50 dark:text-offwhite">
+      <WebFR language={language} setLanguage={setLanguage} darkMode={darkMode} setDarkMode={setDarkMode} />
+      <MobileFR />
     </header>
   );
 }

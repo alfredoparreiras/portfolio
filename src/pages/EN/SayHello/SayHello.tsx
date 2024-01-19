@@ -4,7 +4,7 @@ import Web from './Web'
 import ArrowUp from '@/components/ArrowUp'
 import Social from '@/components/Social'
 
-const Contact = () => {
+const SayHello = () => {
   return (
     <section
       id="sayhello"
@@ -31,4 +31,4 @@ const Contact = () => {
   );
 }
 
-export default transition(Contact);
+export default transition(SayHello);

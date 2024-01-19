@@ -1,39 +1,58 @@
-import {Routes,Route,useLocation} from "react-router-dom"
-import Journey from "./pages/Journey/Journey";
-import Home from "./pages/Home/Home";
-import Creations from "./pages/Creations/Creations";
-import Contact from "./pages/SayHello/SayHello";
-import { AnimatePresence } from "framer-motion";
-import Header from "./components/Header";
+import { useState, useEffect } from "react";
+import English from "./pages/English";
+import French from "./pages/French";
 
 function App() {
-  const location = useLocation(); 
+  // Inicializa o estado do idioma com a preferência salva ou o idioma do navegador
+  const [language, setLanguage] = useState(localStorage.getItem('userLanguage') || navigator.language);
+
+  // Inicializa o estado do modo escuro com a preferência do sistema
+  const savedDarkMode = localStorage.getItem('darkMode');
+  const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initialDarkMode = savedDarkMode !== null ? savedDarkMode === 'true' : prefersDarkMode;
+
+  const [darkMode, setDarkMode] = useState(initialDarkMode);
+
+  // Extrai o código de idioma de duas letras
+  const favoriteLanguage = language.slice(0, 2);
+
+  useEffect(() => {
+    localStorage.setItem('darkMode', darkMode.toString());
+  }, [darkMode]);
+
+  // Efeito colateral para atualizar o localStorage quando o idioma muda
+  useEffect(() => {
+    localStorage.setItem('userLanguage', language);
+  }, [language]);
+
+  // Efeito colateral para lidar com mudanças na preferência de esquema de cores do sistema
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
+  }, [darkMode]);
+  console.log("🚀 ~ App ~ darkMode:", darkMode)
 
   return (
     <>
-      <Header />
-      <main className="relative">
-        <section className="hidden md:flex justify-center min-h-[80vh] flex-col px-8 xlg:px-16 xxlg:px-32 xxxlg:px-40 dark:bg-darkBackground dark:text-white">
-          <AnimatePresence mode="wait">
-            <Routes location={location} key={location.pathname}>
-              <Route index element={<Home />} />
-              <Route path="/journey" element={<Journey />} />
-              <Route path="/creations" element={<Creations />} />
-              <Route path="/sayhello" element={<Contact />} />
-            </Routes>
-          </AnimatePresence>
-        </section>
-        <section className="min-h-screen md:hidden lg:hidden">
-          <section className="px-8 py-8">
-            <Home />
-            <Journey />
-            <Creations />
-            <Contact />
-          </section>
-        </section>
-      </main>
+      {favoriteLanguage === "fr" ?
+        <French
+          language={favoriteLanguage}
+          setLanguage={setLanguage}
+          darkMode={darkMode}
+          setDarkMode={setDarkMode}
+        /> :
+        <English
+          language={favoriteLanguage}
+          setLanguage={setLanguage}
+          darkMode={darkMode}
+          setDarkMode={setDarkMode}
+        />
+      }
     </>
   );
 }
 
-export default App
+export default App;

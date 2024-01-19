@@ -5,14 +5,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* * { 
-  border: 1px dotted limegreen; 
+/* * {
+  border: 1px dotted limegreen;
 } */
 
-html, body, #root, .app{ 
+html, body, #root, .app{
   margin: 0 auto;
-  background-color:#F4F4F5;
-  font-family: "DM Sans", sans-serif; 
+  font-family: "DM Sans", sans-serif;
+  min-height: 100vh;
 }
 
 .slide-in{
@@ -77,7 +77,7 @@ html, body, #root, .app{
     background-color: #252f42;
   }
 
-  .slide-out,.slide-in { 
+  .slide-out,.slide-in {
     background-color: #91FCDC;
   }
 }

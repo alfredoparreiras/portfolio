@@ -1,5 +1,5 @@
 import MainTitle from "@/components/MainTitle"
-import Me2 from "../../assets/IMG_1841.jpeg"
+import Me2 from "../../../assets/IMG_1841.jpeg"
 import { skills } from './skills';
 import Icons from "@/components/Icons";
 
