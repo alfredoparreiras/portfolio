@@ -2,14 +2,10 @@ import { projectsDescriptions as projects } from "./projectsDescription";
 import ArrowRight from "@/components/ArrowRight";
 import MainTitle from "@/components/MainTitle";
 
-
 const Mobile = () => {
   return (
     <>
-      <section
-        id="mobileProjects"
-        className="dark:text-offwhite lg:hidden"
-      >
+      <section id="mobileProjects" className="dark:text-offwhite lg:hidden">
         <MainTitle title="Creations" />
         <div className="my-10 flex flex-col">
           {projects.map((project, index) => {
@@ -27,8 +23,11 @@ const Mobile = () => {
                     </div>
                   )}
                 </div>
-                <img src={project.mobileImages[0]} alt={`HomePage Image from ${project.title}'s project`} />
-                <p className="mt-4 text-sm">{project.description}</p>
+                <img
+                  src={project.mobileImages[0]}
+                  alt={`HomePage Image from ${project.title}'s project`}
+                />
+                <p className="mt-4 text-base">{project.description}</p>
                 <div className="mt-6">
                   <div className="mt-5 grid grid-cols-3 gap-3">
                     {project.tools.map((tool, index) => {
@@ -52,6 +51,6 @@ const Mobile = () => {
       <div id="finalSession"></div>
     </>
   );
-}
+};
 
-export default Mobile
+export default Mobile;

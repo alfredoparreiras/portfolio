@@ -1,14 +1,13 @@
-
-import Form from "@/components/Form"
+import FormFR from "@/components/FormFR";
 
 const Web = () => {
   return (
     <section className="hidden md:block">
       <div className="flex justify-center items-center mt-18 mb-10 formWeb">
-          <Form />
+        <FormFR />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Web
+export default Web;

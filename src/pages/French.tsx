@@ -1,5 +1,5 @@
-import { AnimatePresence } from "framer-motion"
-import { Route, Routes, useLocation } from "react-router-dom"
+import { AnimatePresence } from "framer-motion";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./FR/HomeFR/Home";
 import Journey from "./FR/JourneyFR/Journey";
 import Creations from "./FR/CreationsFR/Creations";
@@ -11,16 +11,30 @@ type FrenchProps = {
   setLanguage: React.Dispatch<React.SetStateAction<string>>;
   darkMode: boolean;
   setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
-}
+};
 
-const French = ({language, setLanguage, darkMode, setDarkMode}: FrenchProps) => {
-
+const French = ({
+  language,
+  setLanguage,
+  darkMode,
+  setDarkMode,
+}: FrenchProps) => {
   const location = useLocation();
   return (
     <>
-      <HeaderFR language={language} setLanguage={setLanguage} darkMode={darkMode} setDarkMode={setDarkMode} />
-      <main className="">
-        <section className="hidden md:flex justify-center min-h-[80vh] flex-col px-8 xlg:px-16 xxlg:px-32 xxxlg:px-40 dark:bg-darkBackground dark:text-white">
+      <HeaderFR
+        language={language}
+        setLanguage={setLanguage}
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
+      />
+      <main className="relative antialiased">
+        <section
+          className="hidden md:flex
+                            justify-center min-h-[80vh] flex-col px-8 xlg:px-16
+                            xxlg:px-32 xxxlg:px-40 bg-offwhite
+                            dark:bg-darkBackground dark:text-white"
+        >
           <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
               <Route index element={<Home />} />
@@ -40,7 +54,7 @@ const French = ({language, setLanguage, darkMode, setDarkMode}: FrenchProps) => 
         </section>
       </main>
     </>
-  )
-}
+  );
+};
 
-export default French
+export default French;

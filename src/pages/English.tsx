@@ -1,26 +1,40 @@
-import Header from '@/components/Header'
-import { AnimatePresence } from 'framer-motion'
-import { Route, Routes, useLocation } from 'react-router-dom'
-import Home from './EN/Home/Home'
-import Journey from './EN/Journey/Journey'
-import Creations from './EN/Creations/Creations'
-import SayHello from './EN/SayHello/SayHello'
+import Header from "@/components/Header";
+import { AnimatePresence } from "framer-motion";
+import { Route, Routes, useLocation } from "react-router-dom";
+import Home from "./EN/Home/Home";
+import Journey from "./EN/Journey/Journey";
+import Creations from "./EN/Creations/Creations";
+import SayHello from "./EN/SayHello/SayHello";
 
 type EnglishProps = {
   language: string;
   setLanguage: React.Dispatch<React.SetStateAction<string>>;
   darkMode: boolean;
   setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
-}
+};
 
-const English = ({language, setLanguage, darkMode, setDarkMode}: EnglishProps) => {
+const English = ({
+  language,
+  setLanguage,
+  darkMode,
+  setDarkMode,
+}: EnglishProps) => {
   const location = useLocation();
 
   return (
     <>
-      <Header language={language} setLanguage={setLanguage} darkMode={darkMode} setDarkMode={setDarkMode} />
-      <main className="relative">
-        <section className="hidden md:flex justify-center min-h-[90vh] flex-col px-8 xlg:px-16 xxlg:px-32 xxxlg:px-40 bg-offwhite dark:bg-darkBackground dark:text-white">
+      <Header
+        language={language}
+        setLanguage={setLanguage}
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
+      />
+      <main className="relative antialiased">
+        <section
+          className="hidden md:flex justify-center min-h-[80vh] flex-col
+                  px-8 xlg:px-16 xxlg:px-32 xxxlg:px-40 bg-offwhite
+                 dark:bg-darkBackground dark:text-white"
+        >
           <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
               <Route index element={<Home />} />
@@ -40,7 +54,7 @@ const English = ({language, setLanguage, darkMode, setDarkMode}: EnglishProps) =
         </section>
       </main>
     </>
-  )
-}
+  );
+};
 
-export default English
+export default English;

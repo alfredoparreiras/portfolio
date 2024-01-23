@@ -6,15 +6,25 @@ type HeaderProps = {
   setLanguage: React.Dispatch<React.SetStateAction<string>>;
   darkMode: boolean;
   setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
-}
+};
 
-const Header = ({language, setLanguage, darkMode, setDarkMode}: HeaderProps) => {
+const Header = ({
+  language,
+  setLanguage,
+  darkMode,
+  setDarkMode,
+}: HeaderProps) => {
   return (
-    <header className="xsm:sticky xsm:top-0 md:static z-50 dark:text-offwhite">
-      <WebFR language={language} setLanguage={setLanguage} darkMode={darkMode} setDarkMode={setDarkMode} />
-      <MobileFR />
+    <header className="xsm:sticky antialiased xsm:top-0 md:static z-50 bg-offwhite dark:bg-darkBackground dark:text-offwhite">
+      <WebFR
+        language={language}
+        setLanguage={setLanguage}
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
+      />
+      <MobileFR language={language} setLanguage={setLanguage} />
     </header>
   );
-}
+};
 
-export default Header
+export default Header;

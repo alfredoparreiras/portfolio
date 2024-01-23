@@ -1,6 +1,6 @@
-const Form = () => {
+const FormFR = () => {
   return (
-    <div className="justify-star flex items-center lg:mt-10 CADEVOCEPORRA">
+    <div className="justify-star flex items-center lg:mt-10">
       <div className="mx-auto lg:mx-0 w-full max-w-lg dark:text-offwhite">
         <p className="mt-3">
           Send me an email at{" "}
@@ -12,9 +12,10 @@ const Form = () => {
           or send me a message here:
         </p>
         <form
-          action="https://formspree.io/f/moqgjjez"
+          action="https://getform.io/f/87310664-6450-4265-8e68-63c9bba2a6a6"
           method="POST"
           className="mt-10"
+          target="_blank"
         >
           <div className="grid gap-6 sm:grid-cols-2">
             <div className="relative z-0 col-span-2">
@@ -69,4 +70,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default FormFR;

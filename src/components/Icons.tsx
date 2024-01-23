@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 type Skill = {
   name: string;
   imgUrl: string;
@@ -7,27 +5,18 @@ type Skill = {
 };
 
 type IconsProp = {
-  skill: Skill
-}
+  skill: Skill;
+  darkMode: boolean | null;
+};
 
-const Icons = ({skill}: IconsProp) => {
-  const [darkMode, setDarkMode] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const handleChange = (event: MediaQueryListEvent) => setDarkMode(event.matches);
-
-    mediaQuery.addEventListener('change', handleChange)
-    return () => mediaQuery.removeEventListener('change', handleChange);
-  }, [])
-
+const Icons = ({ skill, darkMode }: IconsProp) => {
   return (
-          <img
-            src={darkMode ? skill.DarkImgUrl : skill.imgUrl}
-            alt={`${skill.name}' icons'`}
-            className="max-w-icon xlg:max-w-xIcon"
-          />
-  )
-}
+    <img
+      src={darkMode ? skill.DarkImgUrl : skill.imgUrl}
+      alt={`${skill.name}' icons'`}
+      className="max-w-icon xlg:max-w-xIcon"
+    />
+  );
+};
 
-export default Icons
+export default Icons;

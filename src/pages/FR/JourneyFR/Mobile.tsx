@@ -1,10 +1,18 @@
 import Icons from "@/components/Icons";
-import Me from "../../../assets/IMG_1841.jpeg"
-import { skills } from './skills';
-import MainTitle from '@/components/MainTitle';
-
+import Me from "../../../assets/IMG_1841.jpeg";
+import { skills } from "./skills";
+import MainTitle from "@/components/MainTitle";
+import { useState } from "react";
 
 const Mobile = () => {
+  const savedTheme = localStorage.getItem("darkMode");
+
+  let booleanSavedTheme;
+  if (savedTheme === "true") booleanSavedTheme = true;
+  else booleanSavedTheme = false;
+
+  const [darkMode] = useState(booleanSavedTheme);
+
   return (
     <section className="relative -top-5 md:top-0 dark:text-offwhite lg:hidden">
       <MainTitle changeStyle={"w-full"} title="Journée" />
@@ -18,16 +26,24 @@ const Mobile = () => {
         </div>
         <div className="mt-10 flex flex-col text-justify text-lg">
           <p className="mb-3">
-            Salut, je suis Alfredo, un Brésilien fier vivant actuellement dans la ville vibrante de Montréal. Je suis heureusement marié à Carol et profondément lié à ma foi chrétienne.
+            Salut, je suis Alfredo, un Brésilien fier vivant actuellement dans
+            la ville vibrante de Montréal. Je suis heureusement marié à Carol et
+            profondément lié à ma foi chrétienne.
           </p>
           <p className="mb-3">
-            En tant que développeur concentré, je suis enthousiasmé par l'exploration de nouvelles technologies et l'élargissement du champ de la découverte numérique. Vous pouvez trouver ma pile actuelle ci-dessous.
+            En tant que développeur concentré, je suis enthousiasmé par
+            l'exploration de nouvelles technologies et l'élargissement du champ
+            de la découverte numérique. Vous pouvez trouver ma pile actuelle
+            ci-dessous.
           </p>
           <p className="mb-3">
-            Mais il y a plus en moi que la simple programmation ! Quand je ne travaille pas, j'aime lire, courir et explorer les univers de la cuisine et du café.
+            Mais il y a plus en moi que la simple programmation ! Quand je ne
+            travaille pas, j'aime lire, courir et explorer les univers de la
+            cuisine et du café.
           </p>
           <p className="mb-3">
-            Un fait original sur moi ? J'ai une collection croissante de tatouages.
+            Un fait original sur moi ? J'ai une collection croissante de
+            tatouages.
           </p>
           <p className="mb-3 text-left">Bienvenue !</p>
 
@@ -36,7 +52,7 @@ const Mobile = () => {
               return (
                 <div key={index} className="">
                   <div className="flex flex-col items-center">
-                    <Icons skill={item} />
+                    <Icons darkMode={darkMode} skill={item} />
                     <p>{item.name}</p>
                   </div>
                 </div>
@@ -47,6 +63,6 @@ const Mobile = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Mobile
+export default Mobile;

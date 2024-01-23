@@ -1,10 +1,17 @@
 import Icons from "@/components/Icons";
-import Me from "../../../assets/IMG_1841.jpeg"
-import { skills } from './skills';
-import MainTitle from '@/components/MainTitle';
-
+import Me from "../../../assets/IMG_1841.jpeg";
+import { skills } from "./skills";
+import MainTitle from "@/components/MainTitle";
+import { useState } from "react";
 
 const Mobile = () => {
+  const savedTheme = localStorage.getItem("darkMode");
+
+  let booleanSavedTheme;
+  if (savedTheme === "true") booleanSavedTheme = true;
+  else booleanSavedTheme = false;
+
+  const [darkMode] = useState(booleanSavedTheme);
   return (
     <section className="relative -top-5 md:top-0 dark:text-offwhite lg:hidden">
       <MainTitle changeStyle={"w-full"} title="Journey" />
@@ -41,7 +48,7 @@ const Mobile = () => {
               return (
                 <div key={index} className="">
                   <div className="flex flex-col items-center">
-                    <Icons skill={item} />
+                    <Icons darkMode={darkMode} skill={item} />
                     <p>{item.name}</p>
                   </div>
                 </div>
@@ -52,6 +59,6 @@ const Mobile = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Mobile
+export default Mobile;

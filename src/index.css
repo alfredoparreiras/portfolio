@@ -1,21 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,400;9..40,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,400;9..40,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: "Geist";
+    font-weight: 400; /* Regular */
+    src: url(/src/assets/Fonts/Geist-Medium.woff2) format("woff2");
+  }
+
+  @font-face {
+    font-family: "Geist";
+    font-weight: 600; /* Semi-bold */
+    src: url(/src/assets/Fonts/Geist-SemiBold.woff2) format("woff2");
+  }
+
+  @font-face {
+    font-family: "Geist";
+    font-weight: 100; /* Thin */
+    src: url(/src/assets/Fonts/Geist-Thin.woff2) format("woff2");
+  }
+}
+
 /* * {
   border: 1px dotted limegreen;
 } */
 
-html, body, #root, .app{
+html,
+body,
+#root,
+.app {
   margin: 0 auto;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Geist", sans-serif;
   min-height: 100vh;
 }
 
-.slide-in{
+.slide-in {
   position: fixed;
   top: 0;
   left: 0;
@@ -24,7 +47,7 @@ html, body, #root, .app{
   background-color: #305176;
   transform-origin: top;
 }
-.slide-out{
+.slide-out {
   position: fixed;
   top: 0;
   left: 0;
@@ -34,8 +57,13 @@ html, body, #root, .app{
   transform-origin: bottom;
 }
 
+body.dark {
+  background-color: #252f42;
+}
 
-
+body {
+  background-color: #f4f4f5;
+}
 
 @media screen and (min-width: 1920px) {
   .formWeb {
@@ -43,21 +71,21 @@ html, body, #root, .app{
   }
 }
 
-@media screen and (max-width:430px) and (min-height: 800px){
-  .tallDevice{
+@media screen and (max-width: 430px) and (min-height: 800px) {
+  .tallDevice {
     font-size: 3.5rem;
     line-height: 3.25rem;
   }
 }
 
-@media screen and (max-width:430px) and (min-height: 800px){
-  .tallDevice{
+@media screen and (max-width: 430px) and (min-height: 800px) {
+  .tallDevice {
     font-size: 3.5rem;
     line-height: 3.25rem;
   }
 }
 @media screen and (max-width: 280px) {
-  .smallDevice{
+  .smallDevice {
     font-size: 2rem;
     line-height: 2.25rem;
   }
@@ -71,13 +99,9 @@ html, body, #root, .app{
   }
 }
 
-
 @media (prefers-color-scheme: dark) {
-  html, body, #root, .app {
-    background-color: #252f42;
-  }
-
-  .slide-out,.slide-in {
-    background-color: #91FCDC;
+  .slide-out,
+  .slide-in {
+    background-color: #91fcdc;
   }
 }
