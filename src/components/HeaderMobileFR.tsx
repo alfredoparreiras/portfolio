@@ -10,8 +10,8 @@ const routes = [
     href: "/",
   },
   {
-    title: "Journée",
-    href: "#journey",
+    title: "Parcours",
+    href: "#parcours",
   },
   {
     title: "Créations",

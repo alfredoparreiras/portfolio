@@ -3,13 +3,13 @@ const FormFR = () => {
     <div className="justify-star flex items-center lg:mt-10">
       <div className="mx-auto lg:mx-0 w-full max-w-lg dark:text-offwhite">
         <p className="mt-3">
-          Send me an email at{" "}
+          Envoyez-moi un e-mail à{" "}
           <a href="mailto:a.alfredops@gmail.com">
             <span className=" text-accentColor dark:text-darkAccentColor">
               a.alfredops@gmail.com
             </span>
           </a>{" "}
-          or send me a message here:
+          ou envoyez-moi un message ici :
         </p>
         <form
           action="https://getform.io/f/87310664-6450-4265-8e68-63c9bba2a6a6"
@@ -26,7 +26,7 @@ const FormFR = () => {
                 placeholder=" "
               />
               <label className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 dark:text-offwhite duration-500 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-accentColor  dark:peer-focus:text-darkAccentColor">
-                Your name
+                Votre nom
               </label>
             </div>
             <div className="relative z-0 col-span-2">
@@ -37,7 +37,7 @@ const FormFR = () => {
                 placeholder=" "
               />
               <label className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500  dark:text-offwhite duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-accentColor  dark:peer-focus:text-darkAccentColor">
-                Your email
+                Votre e-mail
               </label>
             </div>
             <div className="relative z-0 col-span-2">
@@ -48,7 +48,7 @@ const FormFR = () => {
                 placeholder=" "
               ></textarea>
               <label className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500  dark:text-offwhite duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-accentColor  dark:peer-focus:text-darkAccentColor">
-                Your message
+                Votre message
               </label>
             </div>
           </div>
@@ -61,7 +61,7 @@ const FormFR = () => {
                           hover:rounded-md hover:shadow-[4px_4px_0px_#24527A] dark:hover:shadow-[4px_4px_0px_#82e2c6] active:translate-x-[0px]
                           active:translate-y-[0px] active:rounded-2xl active:shadow-none"
             >
-              Send Message
+              Envoyer le message
             </button>
           </div>
         </form>

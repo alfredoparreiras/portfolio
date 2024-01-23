@@ -17,7 +17,7 @@ const Web = () => {
     <section className="hidden lg:block">
       <div className="flex w-full justify-evenly lg:pt-4">
         <div className=" w-[45%] xlg:w-[30%]">
-          <MainTitle title="Journée" changeStyle="xlg:text-7xl" />
+          <MainTitle title="Parcours" changeStyle="xlg:text-7xl" />
           <div
             className="text-[1.1rem] leading-8
                             xlg:text-[1.5rem]"
@@ -28,15 +28,15 @@ const Web = () => {
               et profondément connecté à ma foi chrétienne.
             </p>
             <p className="mb-3">
-              En tant que développeur concentré, mon enthousiasme réside dans
+              En tant que développeur déterminé, mon enthousiasme réside dans
               l'exploration de nouvelles technologies et l'élargissement du
-              champ de la découverte numérique. Vous pouvez trouver ma pile
-              actuelle ci-dessous.
+              champ de la découverte numérique. Vous pouvez trouver mon
+              répertoire actuelle ci-dessous.
             </p>
             <p className="mb-3">
-              Mais il y a plus en moi que le simple codage ! Quand je ne
-              travaille pas, j'aime lire, courir et explorer les mondes de la
-              cuisine et du café.
+              Mais il y a plus en moi que seulement le développement ! Quand je
+              ne travaille pas, j'aime lire, la course à pied et explorer les
+              mondes de la cuisine et du café.
             </p>
             <p className="mb-3">
               Un fait insolite sur moi ? Je possède une collection croissante de

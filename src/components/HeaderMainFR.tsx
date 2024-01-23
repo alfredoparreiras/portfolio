@@ -58,7 +58,7 @@ const WebFR = ({ setLanguage, darkMode, setDarkMode }: HeaderProps) => {
           href="/journey"
           className=" hover:text-accentColor dark:hover:text-darkAccentColor"
         >
-          Journée
+          Parcours
         </a>
         <a
           href="/creations"

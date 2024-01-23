@@ -15,7 +15,7 @@ const Mobile = () => {
 
   return (
     <section className="relative -top-5 md:top-0 dark:text-offwhite lg:hidden">
-      <MainTitle changeStyle={"w-full"} title="Journée" />
+      <MainTitle changeStyle={"w-full"} title="Parcours" />
       <div className="flex flex-col items-center">
         <div className="mt-10 w-screen flex justify-center">
           <img
@@ -31,15 +31,15 @@ const Mobile = () => {
             profondément lié à ma foi chrétienne.
           </p>
           <p className="mb-3">
-            En tant que développeur concentré, je suis enthousiasmé par
+            En tant que développeur déterminé, mon enthousiasme réside dans
             l'exploration de nouvelles technologies et l'élargissement du champ
-            de la découverte numérique. Vous pouvez trouver ma pile actuelle
-            ci-dessous.
+            de la découverte numérique. Vous pouvez trouver mon répertoire
+            actuelle ci-dessous.
           </p>
           <p className="mb-3">
-            Mais il y a plus en moi que la simple programmation ! Quand je ne
-            travaille pas, j'aime lire, courir et explorer les univers de la
-            cuisine et du café.
+            Mais il y a plus en moi que seulement le développement ! Quand je ne
+            travaille pas, j'aime lire, la course à pied et explorer les mondes
+            de la cuisine et du café.
           </p>
           <p className="mb-3">
             Un fait original sur moi ? J'ai une collection croissante de

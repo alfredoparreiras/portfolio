@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 
 const MobileHome = () => {
-
   const incomeAnimation = {
     initial: {
       y: "30vh",
@@ -58,12 +57,14 @@ const MobileHome = () => {
       <div className="overflow-hidden">
         <motion.p variants={incomeAnimation} className="mt-5">
           {" "}
-          Dedicated about{" "}
+          Dedicated to{" "}
           <span className="text-accentColor dark:text-darkAccentColor">
             solving problems
           </span>{" "}
           through{" "}
-          <span className="text-accentColor dark:text-darkAccentColor">code</span>
+          <span className="text-accentColor dark:text-darkAccentColor">
+            code
+          </span>
         </motion.p>
       </div>
       <div className="overflow-hidden">
