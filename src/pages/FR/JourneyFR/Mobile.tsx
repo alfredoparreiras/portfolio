@@ -34,7 +34,7 @@ const Mobile = () => {
             En tant que développeur déterminé, mon enthousiasme réside dans
             l'exploration de nouvelles technologies et l'élargissement du champ
             de la découverte numérique. Vous pouvez trouver mon répertoire
-            actuelle ci-dessous.
+            actuel ci-dessous.
           </p>
           <p className="mb-3">
             Mais il y a plus en moi que seulement le développement ! Quand je ne
