@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import English from "./pages/English";
 import French from "./pages/French";
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   // Inicializa o estado do idioma com a preferência salva ou o idioma do navegador
@@ -56,6 +57,7 @@ function App() {
           setDarkMode={setDarkMode}
         />
       )}
+      <Analytics />
     </>
   );
 }
